@@ -1,347 +1,527 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Terms of Service - MarkView</title>
+
+    <!-- Primary Meta Tags -->
+    <title>Terms of Service - MarkView | Usage Terms & Conditions</title>
+    <meta name="title" content="Terms of Service - MarkView | Usage Terms & Conditions">
+    <meta name="description"
+        content="MarkView Terms of Service: Read our usage terms, license agreement, user responsibilities, and legal conditions for using the MarkView Chrome extension.">
+    <meta name="robots" content="index, follow">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://getmarkview.github.io/terms.html">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://getmarkview.github.io/terms.html">
+    <meta property="og:title" content="Terms of Service - MarkView">
+    <meta property="og:description"
+        content="MarkView Terms of Service: Usage terms and conditions for the MarkView Chrome extension.">
+    <meta property="og:site_name" content="MarkView">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary">
+    <meta property="twitter:url" content="https://getmarkview.github.io/terms.html">
+    <meta property="twitter:title" content="Terms of Service - MarkView">
+    <meta property="twitter:description"
+        content="MarkView Terms of Service: Usage terms and conditions for the MarkView Chrome extension.">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/logo.svg">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#667eea" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#0d1117" media="(prefers-color-scheme: dark)">
+
+    <!-- Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <style>
-        .terms-container {
-            max-width: 800px;
-            margin: 120px auto 60px;
-            padding: 0 var(--spacing-md);
-        }
-        .terms-header {
-            text-align: center;
-            margin-bottom: var(--spacing-xl);
-        }
-        .terms-content h2 {
-            font-size: 1.75rem;
-            font-weight: 700;
-            margin-top: var(--spacing-xl);
-            margin-bottom: var(--spacing-md);
-            color: var(--gray-900);
-        }
-        .terms-content h3 {
-            font-size: 1.25rem;
-            font-weight: 600;
-            margin-top: var(--spacing-lg);
-            margin-bottom: var(--spacing-sm);
-            color: var(--gray-800);
-        }
-        .terms-content p {
-            margin-bottom: var(--spacing-md);
-            color: var(--gray-700);
-            line-height: 1.8;
-        }
-        .terms-content ul, .terms-content ol {
-            margin-bottom: var(--spacing-md);
-            margin-left: var(--spacing-lg);
-            color: var(--gray-700);
-            line-height: 1.8;
-        }
-        .terms-content li {
-            margin-bottom: var(--spacing-xs);
-        }
-        .terms-content strong {
-            color: var(--gray-900);
-            font-weight: 600;
-        }
-        .last-updated {
-            background: var(--gray-100);
-            padding: var(--spacing-sm) var(--spacing-md);
-            border-radius: var(--radius-lg);
-            margin-bottom: var(--spacing-xl);
-            text-align: center;
-            color: var(--gray-600);
-            font-weight: 500;
-        }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
     <!-- Navigation -->
     <nav class="navbar">
         <div class="container">
             <div class="nav-content">
                 <a href="index.html" class="logo">
-                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect width="32" height="32" rx="8" fill="url(#gradient)"/>
-                        <path d="M8 12L12 8L16 12M16 20L12 24L8 20M24 12L20 8L16 12M16 20L20 24L24 20" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        <defs>
-                            <linearGradient id="gradient" x1="0" y1="0" x2="32" y2="32">
-                                <stop offset="0%" stop-color="#667eea"/>
-                                <stop offset="100%" stop-color="#764ba2"/>
-                            </linearGradient>
-                        </defs>
-                    </svg>
+                    <img src="assets/logo.svg" alt="MarkView Logo" width="32" height="32">
                     <span class="logo-text">MarkView</span>
                 </a>
-                <div class="nav-links">
+                <div class="nav-links desktop-only">
                     <a href="index.html">Home</a>
                     <a href="support.html">Support</a>
                     <a href="privacy-policy.html">Privacy</a>
+                </div>
+                <div class="nav-actions">
+                    <button class="theme-toggle" aria-label="Toggle theme">
+                        <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="5" />
+                            <line x1="12" y1="1" x2="12" y2="3" />
+                            <line x1="12" y1="21" x2="12" y2="23" />
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+                            <line x1="1" y1="12" x2="3" y2="12" />
+                            <line x1="21" y1="12" x2="23" y2="12" />
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+                        </svg>
+                        <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+                        </svg>
+                    </button>
                 </div>
             </div>
         </div>
     </nav>
 
     <!-- Terms Content -->
-    <div class="terms-container">
-        <div class="terms-header">
-            <h1>Terms of Service</h1>
-            <p style="color: var(--gray-600); font-size: 1.125rem;">Please read these terms carefully</p>
-        </div>
+    <section class="legal-content">
+        <div class="container-narrow">
+            <div class="legal-header">
+                <h1>Terms of Service</h1>
+                <p class="legal-subtitle">Please read these terms carefully before using MarkView</p>
+                <div class="legal-updated">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10" />
+                        <polyline points="12 6 12 12 16 14" />
+                    </svg>
+                    <span>Last Updated: November 19, 2025</span>
+                </div>
+            </div>
 
-        <div class="last-updated">
-            <strong>Last Updated:</strong> November 19, 2025
-        </div>
+            <div class="legal-body">
+                <h2>1. Acceptance of Terms</h2>
+                <p>By installing, accessing, or using MarkView ("the Extension", "Service", "Software", "we", "us", or
+                    "our"), you ("User", "you", or "your") agree to be bound by these Terms of Service ("Terms",
+                    "Agreement"). If you do not agree to these Terms, please do not install or use the Extension.</p>
+                <p>These Terms constitute a legally binding agreement between you and MarkView.</p>
 
-        <div class="terms-content">
-            <h2>1. Acceptance of Terms</h2>
-            <p>By installing, accessing, or using MarkView ("the Extension", "Service", "we", "us", or "our"), you agree to be bound by these Terms of Service ("Terms"). If you do not agree to these Terms, please do not use the Extension.</p>
+                <h2>2. Description of Service</h2>
+                <p>MarkView is a Chrome browser extension that provides markdown file rendering and viewing
+                    capabilities. The Service includes but is not limited to:</p>
+                <ul>
+                    <li>Markdown to HTML rendering with GitHub Flavored Markdown support</li>
+                    <li>Syntax highlighting for 180+ programming languages</li>
+                    <li>Diagram rendering (Mermaid flowcharts, sequence diagrams, Gantt charts)</li>
+                    <li>Mathematical equation rendering (LaTeX/KaTeX)</li>
+                    <li>Table of Contents (TOC) generation and navigation</li>
+                    <li>Local file browsing and folder navigation</li>
+                    <li>External file viewing (GitHub, GitLab, raw markdown URLs)</li>
+                    <li>Customization options (themes, fonts, layout preferences)</li>
+                    <li>Image viewer with lightbox and lazy loading</li>
+                    <li>Live preview with auto-refresh for external files</li>
+                </ul>
 
-            <h2>2. Description of Service</h2>
-            <p>MarkView is a Chrome browser extension that renders markdown files into formatted HTML documents. The Service includes:</p>
-            <ul>
-                <li>Markdown rendering and formatting</li>
-                <li>Syntax highlighting for code blocks</li>
-                <li>Support for diagrams (Mermaid) and mathematical equations (KaTeX)</li>
-                <li>Customization options (themes, fonts, layout)</li>
-                <li>Local file browsing capabilities</li>
-                <li>External file viewing (GitHub, GitLab, etc.)</li>
-            </ul>
+                <h2>3. License and Usage Rights</h2>
 
-            <h2>3. License and Usage Rights</h2>
+                <h3>3.1 License Grant</h3>
+                <p>Subject to your compliance with these Terms, we grant you a limited, non-exclusive, non-transferable,
+                    revocable license to install and use MarkView for personal or commercial purposes.</p>
 
-            <h3>3.1 License Grant</h3>
-            <p>We grant you a limited, non-exclusive, non-transferable, revocable license to use MarkView for personal or commercial purposes, subject to these Terms.</p>
+                <h3>3.2 License Restrictions</h3>
+                <p>You agree <strong>NOT</strong> to:</p>
+                <ul>
+                    <li>Reverse engineer, decompile, disassemble, or attempt to derive source code from the Extension
+                    </li>
+                    <li>Modify, adapt, translate, or create derivative works based on the Extension</li>
+                    <li>Copy, reproduce, or redistribute the Extension</li>
+                    <li>Remove, alter, or obscure any copyright, trademark, or other proprietary notices</li>
+                    <li>Sell, rent, lease, sublicense, or distribute the Extension to third parties</li>
+                    <li>Use the Extension for illegal purposes or to violate any laws or regulations</li>
+                    <li>Use the Extension to harm, disable, overburden, or impair any server or network</li>
+                    <li>Attempt to gain unauthorized access to any systems through the Extension</li>
+                    <li>Use the Extension to transmit viruses, malware, or malicious code</li>
+                </ul>
 
-            <h3>3.2 Restrictions</h3>
-            <p>You may NOT:</p>
-            <ul>
-                <li>Reverse engineer, decompile, or disassemble the Extension</li>
-                <li>Modify, adapt, or create derivative works</li>
-                <li>Remove or alter any copyright notices or branding</li>
-                <li>Distribute, sell, rent, lease, or sublicense the Extension</li>
-                <li>Use the Extension for illegal purposes or to violate any laws</li>
-                <li>Use the Extension in any way that could harm, disable, or impair the Service</li>
-            </ul>
+                <h3>3.3 Reservation of Rights</h3>
+                <p>All rights not expressly granted to you are reserved by MarkView. The Extension is licensed, not
+                    sold.</p>
 
-            <h2>4. User Responsibilities</h2>
+                <h2>4. User Responsibilities</h2>
 
-            <h3>4.1 Account Security</h3>
-            <p>You are responsible for:</p>
-            <ul>
-                <li>Securing your device and browser</li>
-                <li>Any activity that occurs through your installation of the Extension</li>
-                <li>Ensuring you have the right to access and view any markdown files you open</li>
-            </ul>
+                <h3>4.1 Account and Device Security</h3>
+                <p>You are solely responsible for:</p>
+                <ul>
+                    <li>Maintaining the security of your device and browser</li>
+                    <li>All activity that occurs through your installation of the Extension</li>
+                    <li>Ensuring your Chrome browser is up-to-date and secure</li>
+                    <li>Protecting your locally stored settings and preferences</li>
+                </ul>
 
-            <h3>4.2 Content You View</h3>
-            <p>MarkView renders markdown content as-is. You acknowledge that:</p>
-            <ul>
-                <li>The Extension does not filter or modify markdown content</li>
-                <li>You are responsible for ensuring the safety of files you open</li>
-                <li>We are not responsible for the content of markdown files you view</li>
-                <li>Markdown files may contain raw HTML, which will be rendered</li>
-            </ul>
+                <h3>4.2 Content Responsibility</h3>
+                <p>You acknowledge and agree that:</p>
+                <ul>
+                    <li>MarkView renders markdown content as-is without filtering or modification</li>
+                    <li>You are responsible for the safety and legality of markdown files you open</li>
+                    <li>You must have the legal right to access and view all files you open with the Extension</li>
+                    <li>Markdown files may contain raw HTML, JavaScript, or other code that will be rendered</li>
+                    <li>We are not responsible for the content, accuracy, or safety of any markdown files you view</li>
+                    <li>You should not use the Extension to view untrusted or potentially malicious markdown files</li>
+                </ul>
 
-            <h2>5. Privacy and Data</h2>
-            <p>Your privacy is important to us. Please review our <a href="privacy-policy.html" style="color: var(--primary);">Privacy Policy</a> to understand how we handle information.</p>
-            <p>Key points:</p>
-            <ul>
-                <li>We do NOT collect your markdown file contents</li>
-                <li>Settings are stored locally on your device only</li>
-                <li>No data is transmitted to our servers</li>
-                <li>We do not track your usage or behavior</li>
-            </ul>
+                <h3>4.3 Acceptable Use</h3>
+                <p>You agree to use the Extension only for lawful purposes and in compliance with:</p>
+                <ul>
+                    <li>All applicable local, state, national, and international laws</li>
+                    <li>Chrome Web Store Developer Program Policies</li>
+                    <li>These Terms of Service</li>
+                    <li>Any third-party terms that apply to external content you access</li>
+                </ul>
 
-            <h2>6. Third-Party Services</h2>
+                <h2>5. Privacy and Data</h2>
+                <p>Your privacy is critically important to us. Please review our comprehensive <a
+                        href="privacy-policy.html">Privacy Policy</a> to understand our data practices.</p>
 
-            <h3>6.1 Google Fonts</h3>
-            <p>MarkView uses Google Fonts CDN for custom typography. Google's terms and privacy policy apply to this service.</p>
+                <div class="legal-note">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                    </svg>
+                    <div>
+                        <strong>Privacy Highlights:</strong>
+                        <ul style="margin: 8px 0 0 0;">
+                            <li>We do NOT collect, store, or transmit your markdown file contents</li>
+                            <li>Settings are stored locally on your device only</li>
+                            <li>No analytics, tracking, or data collection</li>
+                            <li>No servers or databases</li>
+                        </ul>
+                    </div>
+                </div>
 
-            <h3>6.2 External Markdown Sources</h3>
-            <p>When viewing external markdown files (GitHub, GitLab, etc.), you are subject to those platforms' terms of service and privacy policies.</p>
+                <h2>6. Third-Party Services and Content</h2>
 
-            <h3>6.3 Third-Party Links</h3>
-            <p>Markdown files may contain links to external websites. We are not responsible for the content, terms, or privacy practices of third-party sites.</p>
+                <h3>6.1 Google Fonts</h3>
+                <p>MarkView uses Google Fonts CDN for custom typography. When you use custom fonts:</p>
+                <ul>
+                    <li>Font files are loaded from Google's servers (<code>fonts.googleapis.com</code>)</li>
+                    <li>Google's Terms of Service and Privacy Policy apply</li>
+                    <li>You can avoid this by selecting the "Default" font option</li>
+                </ul>
 
-            <h2>7. Disclaimers and Limitations</h2>
+                <h3>6.2 External Markdown Sources</h3>
+                <p>When viewing markdown files from external websites (GitHub, GitLab, etc.):</p>
+                <ul>
+                    <li>You are subject to those platforms' terms of service and policies</li>
+                    <li>We are not responsible for external content availability or accuracy</li>
+                    <li>External services may track your access to their content</li>
+                </ul>
 
-            <h3>7.1 "AS-IS" Basis</h3>
-            <p>THE EXTENSION IS PROVIDED "AS IS" AND "AS AVAILABLE" WITHOUT WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO:</p>
-            <ul>
-                <li>Warranties of merchantability</li>
-                <li>Fitness for a particular purpose</li>
-                <li>Non-infringement</li>
-                <li>Accuracy, reliability, or completeness</li>
-            </ul>
+                <h3>6.3 Third-Party Links</h3>
+                <p>Markdown files may contain hyperlinks to third-party websites. We:</p>
+                <ul>
+                    <li>Do not endorse or control third-party websites</li>
+                    <li>Are not responsible for third-party content, terms, or privacy practices</li>
+                    <li>Recommend reviewing the terms and privacy policies of websites you visit</li>
+                </ul>
 
-            <h3>7.2 No Guarantee of Availability</h3>
-            <p>We do not guarantee that:</p>
-            <ul>
-                <li>The Extension will be available at all times</li>
-                <li>The Extension will be error-free or bug-free</li>
-                <li>All markdown features will render correctly</li>
-                <li>The Extension will work with all websites or file formats</li>
-            </ul>
+                <h3>6.4 Open Source Components</h3>
+                <p>MarkView incorporates open source libraries, each governed by their respective licenses:</p>
+                <ul>
+                    <li><strong>markdown-it</strong> - MIT License</li>
+                    <li><strong>highlight.js</strong> - BSD 3-Clause License</li>
+                    <li><strong>KaTeX</strong> - MIT License</li>
+                    <li><strong>Mermaid</strong> - MIT License</li>
+                </ul>
+                <p>These components remain under their original licenses and are not covered by these Terms except as
+                    incorporated into MarkView.</p>
 
-            <h3>7.3 Limitation of Liability</h3>
-            <p>TO THE MAXIMUM EXTENT PERMITTED BY LAW, WE SHALL NOT BE LIABLE FOR:</p>
-            <ul>
-                <li>Any indirect, incidental, special, consequential, or punitive damages</li>
-                <li>Loss of data, profits, or business opportunities</li>
-                <li>Damage to your device or data</li>
-                <li>Any third-party claims arising from your use of the Extension</li>
-            </ul>
-            <p>OUR TOTAL LIABILITY SHALL NOT EXCEED $10 USD OR THE AMOUNT YOU PAID FOR THE EXTENSION (CURRENTLY $0 FOR FREE VERSION).</p>
+                <h2>7. Disclaimers and Limitations of Liability</h2>
 
-            <h2>8. Updates and Modifications</h2>
+                <h3>7.1 "AS-IS" and "AS-AVAILABLE" Basis</h3>
+                <p>THE EXTENSION IS PROVIDED "AS IS" AND "AS AVAILABLE" WITHOUT WARRANTIES OF ANY KIND, WHETHER EXPRESS,
+                    IMPLIED, OR STATUTORY, INCLUDING BUT NOT LIMITED TO:</p>
+                <ul>
+                    <li>Implied warranties of merchantability</li>
+                    <li>Fitness for a particular purpose</li>
+                    <li>Non-infringement</li>
+                    <li>Accuracy, reliability, or completeness of content or functionality</li>
+                    <li>Uninterrupted or error-free operation</li>
+                    <li>Freedom from viruses or harmful components</li>
+                </ul>
 
-            <h3>8.1 Extension Updates</h3>
-            <p>We may release updates to MarkView at any time. These updates may:</p>
-            <ul>
-                <li>Add new features</li>
-                <li>Fix bugs and security issues</li>
-                <li>Change or remove existing features</li>
-                <li>Update these Terms</li>
-            </ul>
-            <p>Updates are delivered automatically through the Chrome Web Store.</p>
+                <h3>7.2 No Guarantees</h3>
+                <p>We do not warrant or guarantee that:</p>
+                <ul>
+                    <li>The Extension will meet your specific requirements</li>
+                    <li>The Extension will be available at all times</li>
+                    <li>The Extension will be compatible with all systems or configurations</li>
+                    <li>All markdown features will render correctly in all cases</li>
+                    <li>The Extension will work with all markdown files or formats</li>
+                    <li>Errors or bugs will be corrected</li>
+                </ul>
 
-            <h3>8.2 Changes to Terms</h3>
-            <p>We reserve the right to modify these Terms at any time. When we make changes:</p>
-            <ul>
-                <li>We will update the "Last Updated" date</li>
-                <li>Significant changes will be communicated through extension update notes</li>
-                <li>Continued use of the Extension constitutes acceptance of the new Terms</li>
-            </ul>
+                <h3>7.3 Limitation of Liability</h3>
+                <p>TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT SHALL MARKVIEW, ITS DEVELOPERS, OR
+                    AFFILIATES BE LIABLE FOR ANY:</p>
+                <ul>
+                    <li>Indirect, incidental, special, consequential, or punitive damages</li>
+                    <li>Loss of profits, revenue, data, or business opportunities</li>
+                    <li>Damage to your device, system, or data</li>
+                    <li>Cost of procurement of substitute goods or services</li>
+                    <li>Business interruption or loss of goodwill</li>
+                </ul>
+                <p>WHETHER BASED ON WARRANTY, CONTRACT, TORT (INCLUDING NEGLIGENCE), OR ANY OTHER LEGAL THEORY, EVEN IF
+                    WE HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.</p>
+                <p><strong>AGGREGATE LIABILITY CAP:</strong> Our total liability for all claims related to the Extension
+                    shall not exceed ten U.S. dollars ($10.00 USD) or the amount you paid for the Extension in the past
+                    twelve months, whichever is greater. For the free version, this limit is $10.00 USD.</p>
 
-            <h2>9. Intellectual Property</h2>
+                <h3>7.4 Jurisdictional Limitations</h3>
+                <p>Some jurisdictions do not allow the exclusion of certain warranties or limitation of liability. In
+                    such jurisdictions, our liability will be limited to the maximum extent permitted by law.</p>
 
-            <h3>9.1 Ownership</h3>
-            <p>MarkView, including its code, design, branding, and documentation, is owned by us and protected by copyright and other intellectual property laws.</p>
+                <h2>8. Updates and Modifications</h2>
 
-            <h3>9.2 Trademarks</h3>
-            <p>MarkView name and logo are our trademarks. You may not use them without our prior written permission.</p>
+                <h3>8.1 Extension Updates</h3>
+                <p>We may release updates, patches, or new versions of MarkView at any time. Updates may:</p>
+                <ul>
+                    <li>Add new features or functionality</li>
+                    <li>Fix bugs, security vulnerabilities, or performance issues</li>
+                    <li>Modify or remove existing features</li>
+                    <li>Change user interface or user experience</li>
+                    <li>Update dependencies or libraries</li>
+                </ul>
+                <p>Updates are delivered automatically through the Chrome Web Store. You consent to automatic updates by
+                    installing the Extension.</p>
 
-            <h3>9.3 Open Source Components</h3>
-            <p>MarkView uses open source libraries and components, each with their own licenses:</p>
-            <ul>
-                <li>markdown-it (MIT License)</li>
-                <li>highlight.js (BSD License)</li>
-                <li>KaTeX (MIT License)</li>
-                <li>Mermaid (MIT License)</li>
-            </ul>
-            <p>These components remain under their original licenses.</p>
+                <h3>8.2 Changes to Terms</h3>
+                <p>We reserve the right to modify these Terms at any time. When we make material changes:</p>
+                <ul>
+                    <li>We will update the "Last Updated" date at the top of this page</li>
+                    <li>Significant changes will be communicated through extension update notes</li>
+                    <li>Your continued use of the Extension after changes constitutes acceptance</li>
+                </ul>
+                <p>If you do not agree to modified Terms, you must stop using the Extension and uninstall it.</p>
 
-            <h2>10. Termination</h2>
+                <h2>9. Intellectual Property Rights</h2>
 
-            <h3>10.1 Your Right to Terminate</h3>
-            <p>You may stop using MarkView at any time by:</p>
-            <ul>
-                <li>Uninstalling the Extension from Chrome</li>
-                <li>Removing the Extension from chrome://extensions</li>
-            </ul>
+                <h3>9.1 Ownership</h3>
+                <p>MarkView, including all software code, design, user interface, graphics, documentation, branding, and
+                    related materials, is owned by us and protected by:</p>
+                <ul>
+                    <li>Copyright laws</li>
+                    <li>Trademark laws</li>
+                    <li>Trade secret laws</li>
+                    <li>Other intellectual property laws and treaties</li>
+                </ul>
 
-            <h3>10.2 Our Right to Terminate</h3>
-            <p>We reserve the right to:</p>
-            <ul>
-                <li>Discontinue the Extension at any time</li>
-                <li>Remove the Extension from Chrome Web Store</li>
-                <li>Block access if you violate these Terms</li>
-            </ul>
+                <h3>9.2 Trademarks</h3>
+                <p>The MarkView name, logo, and related marks are our trademarks. You may not:</p>
+                <ul>
+                    <li>Use our trademarks without prior written permission</li>
+                    <li>Use marks that are confusingly similar to ours</li>
+                    <li>Display our trademarks in a way that implies endorsement</li>
+                </ul>
 
-            <h3>10.3 Effect of Termination</h3>
-            <p>Upon termination:</p>
-            <ul>
-                <li>Your license to use MarkView immediately ends</li>
-                <li>You must uninstall the Extension</li>
-                <li>Locally stored settings may remain until you clear Chrome data</li>
-            </ul>
+                <h3>9.3 Feedback and Suggestions</h3>
+                <p>If you provide feedback, suggestions, or ideas about the Extension:</p>
+                <ul>
+                    <li>You grant us a worldwide, royalty-free, perpetual license to use them</li>
+                    <li>We have no obligation to implement your suggestions</li>
+                    <li>We may use feedback without attribution or compensation</li>
+                </ul>
 
-            <h2>11. Geographic Restrictions</h2>
-            <p>MarkView is available globally through the Chrome Web Store. However:</p>
-            <ul>
-                <li>Some features may not work in all countries</li>
-                <li>We make no representation that the Extension is appropriate or available in all locations</li>
-                <li>You are responsible for complying with local laws</li>
-            </ul>
+                <h2>10. Termination</h2>
 
-            <h2>12. Indemnification</h2>
-            <p>You agree to indemnify, defend, and hold us harmless from any claims, damages, losses, liabilities, and expenses (including legal fees) arising from:</p>
-            <ul>
-                <li>Your use of the Extension</li>
-                <li>Your violation of these Terms</li>
-                <li>Your violation of any third-party rights</li>
-                <li>Any content you access or view using the Extension</li>
-            </ul>
+                <h3>10.1 Termination by You</h3>
+                <p>You may terminate this Agreement at any time by:</p>
+                <ul>
+                    <li>Uninstalling the Extension from Chrome</li>
+                    <li>Removing the Extension via <code>chrome://extensions</code></li>
+                </ul>
 
-            <h2>13. Dispute Resolution</h2>
+                <h3>10.2 Termination by Us</h3>
+                <p>We reserve the right to:</p>
+                <ul>
+                    <li>Discontinue the Extension at any time with or without notice</li>
+                    <li>Remove the Extension from the Chrome Web Store</li>
+                    <li>Terminate your access if you violate these Terms</li>
+                    <li>Modify or limit functionality without liability</li>
+                </ul>
 
-            <h3>13.1 Informal Resolution</h3>
-            <p>Before filing a legal claim, you agree to contact us at <a href="mailto:markview.app@gmail.com" style="color: var(--primary);">markview.app@gmail.com</a> to attempt to resolve the dispute informally.</p>
+                <h3>10.3 Effect of Termination</h3>
+                <p>Upon termination of this Agreement:</p>
+                <ul>
+                    <li>Your license to use MarkView immediately ends</li>
+                    <li>You must uninstall and cease all use of the Extension</li>
+                    <li>Locally stored settings will remain until you clear Chrome data</li>
+                    <li>Sections 7, 9, 11, 12, and 13 of these Terms survive termination</li>
+                </ul>
 
-            <h3>13.2 Governing Law</h3>
-            <p>These Terms shall be governed by and construed in accordance with the laws of [Your Jurisdiction], without regard to its conflict of law provisions.</p>
+                <h2>11. Indemnification</h2>
+                <p>You agree to indemnify, defend, and hold harmless MarkView, its developers, affiliates, and partners
+                    from any claims, damages, losses, liabilities, costs, and expenses (including reasonable legal fees)
+                    arising from or related to:</p>
+                <ul>
+                    <li>Your use or misuse of the Extension</li>
+                    <li>Your violation of these Terms</li>
+                    <li>Your violation of any third-party rights (intellectual property, privacy, etc.)</li>
+                    <li>Content you access or view using the Extension</li>
+                    <li>Your violation of any applicable laws or regulations</li>
+                </ul>
 
-            <h3>13.3 Arbitration</h3>
-            <p>Any disputes arising from these Terms or the Extension shall be resolved through binding arbitration, except where prohibited by law.</p>
+                <h2>12. Dispute Resolution</h2>
 
-            <h2>14. Severability</h2>
-            <p>If any provision of these Terms is found to be unenforceable or invalid, that provision shall be limited or eliminated to the minimum extent necessary so that these Terms shall otherwise remain in full force and effect.</p>
+                <h3>12.1 Informal Resolution</h3>
+                <p>Before initiating formal legal action, you agree to contact us at <a
+                        href="mailto:markview.app@gmail.com">markview.app@gmail.com</a> and attempt to resolve disputes
+                    informally for at least 30 days.</p>
 
-            <h2>15. Entire Agreement</h2>
-            <p>These Terms, together with our Privacy Policy, constitute the entire agreement between you and us regarding the Extension and supersede all prior agreements.</p>
+                <h3>12.2 Governing Law</h3>
+                <p>These Terms shall be governed by and construed in accordance with the laws of the jurisdiction where
+                    MarkView is registered, without regard to conflict of law principles.</p>
 
-            <h2>16. No Waiver</h2>
-            <p>Our failure to enforce any right or provision of these Terms shall not be deemed a waiver of such right or provision.</p>
+                <h3>12.3 Venue and Jurisdiction</h3>
+                <p>Any legal action or proceeding arising from these Terms shall be brought exclusively in courts
+                    located in Vietnam. You consent to personal jurisdiction in these courts.</p>
 
-            <h2>17. Contact Information</h2>
-            <p>If you have questions about these Terms, please contact us:</p>
-            <ul>
-                <li><strong>Email:</strong> <a href="mailto:markview.app@gmail.com" style="color: var(--primary);">markview.app@gmail.com</a></li>
-                <li><strong>Support:</strong> <a href="support.html" style="color: var(--primary);">MarkView Support</a></li>
-            </ul>
+                <h3>12.4 Arbitration (Optional)</h3>
+                <p>We may elect to resolve disputes through binding arbitration instead of court litigation, except
+                    where prohibited by law. Arbitration will be conducted by a neutral arbitrator and judgment may be
+                    entered in any court of competent jurisdiction.</p>
 
-            <h2>18. Future Paid Features</h2>
-            <p>MarkView is currently free. If we introduce paid features or subscription tiers in the future:</p>
-            <ul>
-                <li>All existing free features will remain free</li>
-                <li>Paid features will be clearly marked</li>
-                <li>Additional terms specific to paid services will be provided</li>
-                <li>Separate payment terms and refund policies will apply</li>
-            </ul>
-            <p>Your purchase of any paid features will constitute acceptance of those additional terms.</p>
+                <h2>13. Miscellaneous Provisions</h2>
 
-            <h2>19. Export Restrictions</h2>
-            <p>The Extension may be subject to export restrictions. You agree to comply with all applicable export and import laws and regulations.</p>
+                <h3>13.1 Entire Agreement</h3>
+                <p>These Terms, together with our Privacy Policy, constitute the entire agreement between you and us
+                    regarding the Extension and supersede all prior agreements, understandings, and communications.</p>
 
-            <h2>20. Acknowledgment</h2>
-            <p>BY INSTALLING AND USING MARKVIEW, YOU ACKNOWLEDGE THAT YOU HAVE READ, UNDERSTOOD, AND AGREE TO BE BOUND BY THESE TERMS OF SERVICE.</p>
+                <h3>13.2 Severability</h3>
+                <p>If any provision of these Terms is found to be unenforceable, invalid, or illegal, that provision
+                    shall be modified to the minimum extent necessary, and the remaining provisions shall remain in full
+                    force and effect.</p>
 
-            <div style="margin-top: var(--spacing-2xl); padding: var(--spacing-lg); background: var(--gray-50); border-radius: var(--radius-lg); border: 2px solid var(--gray-200);">
-                <p style="margin-bottom: 0; text-align: center; font-weight: 500;">
-                    Questions about these Terms? <a href="support.html" style="color: var(--primary);">Contact our support team</a>
-                </p>
+                <h3>13.3 No Waiver</h3>
+                <p>Our failure to enforce any right or provision of these Terms shall not constitute a waiver of such
+                    right or provision.</p>
+
+                <h3>13.4 Assignment</h3>
+                <p>You may not assign or transfer these Terms or your rights hereunder without our prior written
+                    consent. We may assign these Terms without restriction.</p>
+
+                <h3>13.5 Force Majeure</h3>
+                <p>We shall not be liable for any failure or delay in performance due to circumstances beyond our
+                    reasonable control, including acts of God, war, terrorism, riots, natural disasters, or government
+                    actions.</p>
+
+                <h3>13.6 Export Compliance</h3>
+                <p>The Extension may be subject to export control laws. You agree to comply with all applicable export
+                    and import laws and regulations.</p>
+
+                <h2>14. Geographic Availability</h2>
+                <p>MarkView is available globally through the Chrome Web Store. However:</p>
+                <ul>
+                    <li>Some features may not be available in all countries</li>
+                    <li>We make no representation that the Extension is appropriate for all locations</li>
+                    <li>You are responsible for compliance with local laws in your jurisdiction</li>
+                    <li>We reserve the right to restrict availability in certain regions</li>
+                </ul>
+
+                <h2>15. Future Paid Features and Services</h2>
+                <p>MarkView is currently offered free of charge. We reserve the right to introduce paid features,
+                    premium tiers, or subscription services in the future.</p>
+                <p><strong>If we introduce paid features:</strong></p>
+                <ul>
+                    <li>All existing free features will remain free (grandfathered)</li>
+                    <li>New premium features will be clearly marked and optional</li>
+                    <li>Separate payment terms, refund policies, and subscription terms will apply</li>
+                    <li>You will not be automatically enrolled in paid features</li>
+                    <li>Purchase of paid features will constitute acceptance of additional terms</li>
+                </ul>
+
+                <h2>16. Chrome Web Store Compliance</h2>
+                <p>MarkView complies with Chrome Web Store Developer Program Policies. You acknowledge that:</p>
+                <ul>
+                    <li>Google may remove the Extension from the Chrome Web Store for policy violations</li>
+                    <li>You agree to comply with Chrome Web Store User Terms</li>
+                    <li>Google is not a party to these Terms</li>
+                    <li>Google has no responsibility or liability for the Extension</li>
+                </ul>
+
+                <h2>17. Contact Information</h2>
+                <p>For questions, concerns, or legal inquiries regarding these Terms:</p>
+                <ul>
+                    <li><strong>Email:</strong> <a href="mailto:markview.app@gmail.com">markview.app@gmail.com</a></li>
+                    <li><strong>Support:</strong> <a href="support.html">MarkView Support Page</a></li>
+                </ul>
+                <p>We will respond to inquiries within a reasonable timeframe.</p>
+
+                <h2>18. Acknowledgment and Acceptance</h2>
+                <p class="legal-emphasis">BY INSTALLING, ACCESSING, OR USING MARKVIEW, YOU ACKNOWLEDGE THAT:</p>
+                <ul>
+                    <li>You have read and understood these Terms of Service</li>
+                    <li>You agree to be bound by these Terms</li>
+                    <li>You are legally capable of entering into binding contracts</li>
+                    <li>If using on behalf of an organization, you have authority to bind that entity</li>
+                </ul>
+
+                <div class="legal-summary">
+                    <h3>Questions About These Terms?</h3>
+                    <p>We're here to help. If you have questions or concerns about these Terms of Service, please don't
+                        hesitate to <a href="support.html">contact our support team</a>.</p>
+                </div>
             </div>
         </div>
-    </div>
+    </section>
 
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <img src="assets/logo.svg" alt="MarkView Logo" width="28" height="28">
+                        <span>MarkView</span>
+                    </div>
+                    <p class="footer-tagline">Beautiful markdown viewing for everyone</p>
+                </div>
+
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Product</h4>
+                        <ul>
+                            <li><a href="index.html#features">Features</a></li>
+                            <li><a href="index.html#showcase">Showcase</a></li>
+                            <li><a href="#">Changelog</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-column">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li><a href="support.html">Support</a></li>
+                            <li><a href="#">Documentation</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-column">
+                        <h4>Legal</h4>
+                        <ul>
+                            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                            <li><a href="terms.html">Terms of Service</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
             <div class="footer-bottom">
                 <p>&copy; 2025 MarkView. All rights reserved.</p>
-                <p>
-                    <a href="index.html">Home</a> •
-                    <a href="privacy-policy.html">Privacy</a> •
-                    <a href="terms.html">Terms</a> •
-                    <a href="support.html">Support</a>
-                </p>
             </div>
         </div>
     </footer>
+
+    <script src="script.js"></script>
 </body>
+
 </html>

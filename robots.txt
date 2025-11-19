@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://getmarkview.github.io/sitemap.xml
+
+# Crawl-delay
+Crawl-delay: 1
+
+# Disallow specific paths (if any)
+# Disallow: /private/

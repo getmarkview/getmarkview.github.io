@@ -1,381 +1,681 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Support - MarkView</title>
+
+    <!-- Primary Meta Tags -->
+    <title>Support & FAQ - MarkView | Get Help with Markdown Viewer</title>
+    <meta name="title" content="Support & FAQ - MarkView | Get Help with Markdown Viewer">
+    <meta name="description"
+        content="Get help with MarkView Chrome extension. Find answers to FAQs about installation, themes, features, troubleshooting, and privacy. Contact support for bug reports and feature requests.">
+    <meta name="robots" content="index, follow">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://getmarkview.github.io/support.html">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://getmarkview.github.io/support.html">
+    <meta property="og:title" content="Support & FAQ - MarkView">
+    <meta property="og:description"
+        content="Get help with MarkView Chrome extension. Find answers to FAQs and contact support.">
+    <meta property="og:site_name" content="MarkView">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary">
+    <meta property="twitter:url" content="https://getmarkview.github.io/support.html">
+    <meta property="twitter:title" content="Support & FAQ - MarkView">
+    <meta property="twitter:description"
+        content="Get help with MarkView Chrome extension. Find answers to FAQs and contact support.">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/logo.svg">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#667eea" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#0d1117" media="(prefers-color-scheme: dark)">
+
+    <!-- Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <style>
-        .support-container {
-            max-width: 900px;
-            margin: 120px auto 60px;
-            padding: 0 var(--spacing-md);
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How do I enable file URL access for local markdown files?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Open Chrome and navigate to chrome://extensions/, find MarkView, click Details, scroll to 'Allow access to file URLs' and toggle it ON."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I use MarkView with GitHub markdown files?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes! Click the 'Raw' button on GitHub to view raw markdown files. MarkView will automatically render them beautifully."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does MarkView collect my data?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. MarkView does NOT collect any personal data. All processing happens locally in your browser."
+          }
         }
-        .support-header {
-            text-align: center;
-            margin-bottom: var(--spacing-xl);
-        }
-        .support-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: var(--spacing-lg);
-            margin-bottom: var(--spacing-2xl);
-        }
-        .support-card {
-            background: var(--gray-50);
-            padding: var(--spacing-lg);
-            border-radius: var(--radius-xl);
-            border: 2px solid var(--gray-200);
-            transition: all var(--transition-base);
-        }
-        .support-card:hover {
-            border-color: var(--primary);
-            transform: translateY(-4px);
-            box-shadow: var(--shadow-lg);
-        }
-        .support-card-icon {
-            width: 48px;
-            height: 48px;
-            background: var(--gradient);
-            color: white;
-            border-radius: var(--radius-lg);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: var(--spacing-md);
-        }
-        .support-card h3 {
-            font-size: 1.25rem;
-            font-weight: 700;
-            margin-bottom: var(--spacing-xs);
-            color: var(--gray-900);
-        }
-        .support-card p {
-            color: var(--gray-600);
-            margin-bottom: var(--spacing-md);
-            line-height: 1.6;
-        }
-        .faq-section {
-            margin-top: var(--spacing-2xl);
-        }
-        .faq-item {
-            background: white;
-            border: 2px solid var(--gray-200);
-            border-radius: var(--radius-lg);
-            padding: var(--spacing-lg);
-            margin-bottom: var(--spacing-md);
-        }
-        .faq-question {
-            font-size: 1.125rem;
-            font-weight: 600;
-            color: var(--gray-900);
-            margin-bottom: var(--spacing-sm);
-            display: flex;
-            align-items: center;
-            gap: var(--spacing-xs);
-        }
-        .faq-answer {
-            color: var(--gray-700);
-            line-height: 1.8;
-        }
-        .faq-answer code {
-            background: var(--gray-100);
-            padding: 0.125rem 0.375rem;
-            border-radius: var(--radius-sm);
-            font-family: 'Monaco', 'Courier New', monospace;
-            font-size: 0.875em;
-        }
-        .faq-answer ul, .faq-answer ol {
-            margin: var(--spacing-sm) 0;
-            margin-left: var(--spacing-lg);
-        }
-        .faq-answer li {
-            margin-bottom: var(--spacing-xs);
-        }
-    </style>
+      ]
+    }
+    </script>
 </head>
+
 <body>
     <!-- Navigation -->
     <nav class="navbar">
         <div class="container">
             <div class="nav-content">
                 <a href="index.html" class="logo">
-                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect width="32" height="32" rx="8" fill="url(#gradient)"/>
-                        <path d="M8 12L12 8L16 12M16 20L12 24L8 20M24 12L20 8L16 12M16 20L20 24L24 20" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        <defs>
-                            <linearGradient id="gradient" x1="0" y1="0" x2="32" y2="32">
-                                <stop offset="0%" stop-color="#667eea"/>
-                                <stop offset="100%" stop-color="#764ba2"/>
-                            </linearGradient>
-                        </defs>
-                    </svg>
+                    <img src="assets/logo.svg" alt="MarkView Logo" width="32" height="32">
                     <span class="logo-text">MarkView</span>
                 </a>
-                <div class="nav-links">
+                <div class="nav-links desktop-only">
                     <a href="index.html">Home</a>
+                    <a href="index.html#features">Features</a>
                     <a href="privacy-policy.html">Privacy</a>
                     <a href="terms.html">Terms</a>
+                </div>
+                <div class="nav-actions">
+                    <button class="theme-toggle" aria-label="Toggle theme">
+                        <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="5" />
+                            <line x1="12" y1="1" x2="12" y2="3" />
+                            <line x1="12" y1="21" x2="12" y2="23" />
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+                            <line x1="1" y1="12" x2="3" y2="12" />
+                            <line x1="21" y1="12" x2="23" y2="12" />
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+                        </svg>
+                        <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+                        </svg>
+                    </button>
                 </div>
             </div>
         </div>
     </nav>
 
-    <!-- Support Content -->
-    <div class="support-container">
-        <div class="support-header">
-            <h1>How Can We Help?</h1>
-            <p style="color: var(--gray-600); font-size: 1.125rem;">Get support, report issues, or ask questions</p>
-        </div>
-
-        <!-- Contact Methods -->
-        <div class="support-grid">
-            <div class="support-card">
-                <div class="support-card-icon">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-                        <polyline points="22,6 12,13 2,6"/>
-                    </svg>
-                </div>
-                <h3>Email Support</h3>
-                <p>Send us an email and we'll get back to you within 24-48 hours</p>
-                <a href="mailto:markview.app@gmail.com" class="btn btn-secondary">Send Email</a>
-            </div>
-
-            <div class="support-card">
-                <div class="support-card-icon">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <circle cx="12" cy="12" r="10"/>
-                        <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
-                        <line x1="12" y1="17" x2="12.01" y2="17"/>
-                    </svg>
-                </div>
-                <h3>Issue Tracker</h3>
-                <p>Report bugs or request features on our GitHub issue tracker</p>
-                <a href="#" class="btn btn-secondary">Open Issue</a>
-            </div>
-
-            <div class="support-card">
-                <div class="support-card-icon">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
-                        <polyline points="14 2 14 8 20 8"/>
-                        <line x1="16" y1="13" x2="8" y2="13"/>
-                        <line x1="16" y1="17" x2="8" y2="17"/>
-                        <polyline points="10 9 9 9 8 9"/>
-                    </svg>
-                </div>
-                <h3>Documentation</h3>
-                <p>Browse our comprehensive documentation and guides</p>
-                <a href="#" class="btn btn-secondary">Read Docs</a>
+    <!-- Support Hero -->
+    <section class="support-hero">
+        <div class="container">
+            <div class="support-hero-content">
+                <h1>How Can We Help You?</h1>
+                <p>Get support, report issues, or find answers to common questions</p>
             </div>
         </div>
+    </section>
 
-        <!-- FAQ Section -->
-        <div class="faq-section">
-            <h2 class="section-title">Frequently Asked Questions</h2>
+    <!-- Contact Methods -->
+    <section class="support-section">
+        <div class="container">
+            <div class="support-grid">
+                <div class="support-card">
+                    <div class="support-card-icon purple">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                            <polyline points="22,6 12,13 2,6" />
+                        </svg>
+                    </div>
+                    <h3>Email Support</h3>
+                    <p>Send us your questions and we'll respond within 24-48 hours</p>
+                    <a href="mailto:markview.app@gmail.com" class="btn btn-secondary">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <line x1="22" y1="2" x2="11" y2="13" />
+                            <polygon points="22 2 15 22 11 13 2 9 22 2" />
+                        </svg>
+                        Send Email
+                    </a>
+                </div>
 
-            <div class="faq-item">
-                <div class="faq-question">
-                    <span style="color: var(--primary); font-size: 1.5rem;">❓</span>
-                    How do I enable file URL access for local markdown files?
+                <div class="support-card">
+                    <div class="support-card-icon blue">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <circle cx="12" cy="12" r="10" />
+                            <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" />
+                            <line x1="12" y1="17" x2="12.01" y2="17" />
+                        </svg>
+                    </div>
+                    <h3>Report an Issue</h3>
+                    <p>Found a bug? Let us know and help us improve MarkView</p>
+                    <a href="mailto:markview.app@gmail.com?subject=Bug%20Report" class="btn btn-secondary">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                            <polyline points="14 2 14 8 20 8" />
+                            <line x1="16" y1="13" x2="8" y2="13" />
+                            <line x1="16" y1="17" x2="8" y2="17" />
+                        </svg>
+                        Report Bug
+                    </a>
                 </div>
-                <div class="faq-answer">
-                    <ol>
-                        <li>Open Chrome and go to <code>chrome://extensions/</code></li>
-                        <li>Find MarkView in the list</li>
-                        <li>Click "Details"</li>
-                        <li>Scroll down to "Allow access to file URLs"</li>
-                        <li>Toggle the switch to ON</li>
-                    </ol>
-                    <p>Now you can open local .md files directly in Chrome!</p>
-                </div>
-            </div>
 
-            <div class="faq-item">
-                <div class="faq-question">
-                    <span style="color: var(--primary); font-size: 1.5rem;">❓</span>
-                    Why isn't the extension working on GitHub blob pages?
-                </div>
-                <div class="faq-answer">
-                    <p>MarkView is designed to work with <strong>raw markdown files</strong>, not GitHub's rendered HTML pages.</p>
-                    <p><strong>Solution:</strong> Click the "Raw" button on the GitHub page to view the raw markdown file. MarkView will automatically render it beautifully.</p>
-                    <p>Example:</p>
-                    <ul>
-                        <li>❌ Won't work: <code>github.com/user/repo/blob/main/README.md</code></li>
-                        <li>✅ Will work: <code>raw.githubusercontent.com/user/repo/main/README.md</code></li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question">
-                    <span style="color: var(--primary); font-size: 1.5rem;">❓</span>
-                    How do I change the theme to dark mode?
-                </div>
-                <div class="faq-answer">
-                    <ol>
-                        <li>Click the MarkView extension icon in Chrome toolbar</li>
-                        <li>In the popup, find the "Theme" dropdown</li>
-                        <li>Select "Dark" for dark mode, "Light" for light mode, or "Auto" to follow your system preference</li>
-                    </ol>
-                    <p>You can also use the keyboard shortcut: <code>Ctrl+Shift+T</code> (or <code>Cmd+Shift+T</code> on Mac)</p>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question">
-                    <span style="color: var(--primary); font-size: 1.5rem;">❓</span>
-                    Can I customize the font and layout?
-                </div>
-                <div class="faq-answer">
-                    <p>Yes! MarkView offers extensive customization:</p>
-                    <ul>
-                        <li><strong>Font Family:</strong> Choose from 9 fonts (Inter, Merriweather, Roboto, etc.)</li>
-                        <li><strong>Font Size:</strong> Adjust with the slider (12px - 24px)</li>
-                        <li><strong>Line Height:</strong> Control spacing between lines (1.0 - 2.5)</li>
-                        <li><strong>Max Width:</strong> Set content width (600px - 1200px)</li>
-                        <li><strong>Centered Layout:</strong> Toggle centered layout on/off</li>
-                    </ul>
-                    <p>All settings are accessible from the extension popup.</p>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question">
-                    <span style="color: var(--primary); font-size: 1.5rem;">❓</span>
-                    Does auto-refresh work with local files?
-                </div>
-                <div class="faq-answer">
-                    <p><strong>No</strong>, auto-refresh only works with external files (HTTP/HTTPS URLs) due to Chrome security restrictions.</p>
-                    <p><strong>For local files:</strong> You'll need to manually refresh the page (F5) after editing the markdown file.</p>
-                    <p><strong>For external files:</strong> Enable auto-refresh in the popup settings, and the page will update automatically every 2 seconds.</p>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question">
-                    <span style="color: var(--primary); font-size: 1.5rem;">❓</span>
-                    How do I view the table of contents?
-                </div>
-                <div class="faq-answer">
-                    <p>The Table of Contents (TOC) sidebar appears automatically for markdown files with headings.</p>
-                    <p><strong>Show/Hide TOC:</strong></p>
-                    <ul>
-                        <li>Click the TOC toggle button (≡ icon) in the top-right corner</li>
-                        <li>Or use keyboard shortcut: <code>Ctrl+Shift+O</code> (or <code>Cmd+Shift+O</code> on Mac)</li>
-                    </ul>
-                    <p>The TOC automatically highlights the current section as you scroll.</p>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question">
-                    <span style="color: var(--primary); font-size: 1.5rem;">❓</span>
-                    Can I print markdown files rendered by MarkView?
-                </div>
-                <div class="faq-answer">
-                    <p><strong>Yes!</strong> MarkView is print-friendly.</p>
-                    <ol>
-                        <li>Press <code>Ctrl+P</code> (or <code>Cmd+P</code> on Mac)</li>
-                        <li>The print dialog will open with all images loaded automatically</li>
-                        <li>Sidebars and UI elements are hidden in print view</li>
-                        <li>Print or save as PDF</li>
-                    </ol>
-                    <p>Lazy-loaded images are automatically loaded before printing to ensure complete output.</p>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question">
-                    <span style="color: var(--primary); font-size: 1.5rem;">❓</span>
-                    Does MarkView collect my data?
-                </div>
-                <div class="faq-answer">
-                    <p><strong>No.</strong> MarkView does NOT collect any personal data.</p>
-                    <ul>
-                        <li>Your markdown files are never uploaded or transmitted</li>
-                        <li>Your settings are stored locally on your device only</li>
-                        <li>No analytics, tracking, or data collection</li>
-                        <li>All processing happens in your browser</li>
-                    </ul>
-                    <p>Read our full <a href="privacy-policy.html" style="color: var(--primary);">Privacy Policy</a> for details.</p>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question">
-                    <span style="color: var(--primary); font-size: 1.5rem;">❓</span>
-                    What markdown features are supported?
-                </div>
-                <div class="faq-answer">
-                    <p>MarkView supports GitHub Flavored Markdown and more:</p>
-                    <ul>
-                        <li>✅ Headings, paragraphs, line breaks</li>
-                        <li>✅ Bold, italic, strikethrough</li>
-                        <li>✅ Lists (ordered, unordered, nested)</li>
-                        <li>✅ Task lists (checkboxes)</li>
-                        <li>✅ Links and images</li>
-                        <li>✅ Code blocks with syntax highlighting (180+ languages)</li>
-                        <li>✅ Tables</li>
-                        <li>✅ Blockquotes</li>
-                        <li>✅ Horizontal rules</li>
-                        <li>✅ Mermaid diagrams (flowcharts, sequence, Gantt)</li>
-                        <li>✅ KaTeX math equations</li>
-                        <li>✅ Emoji :smile:</li>
-                        <li>✅ HTML (rendered as-is)</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question">
-                    <span style="color: var(--primary); font-size: 1.5rem;">❓</span>
-                    How do I report a bug or request a feature?
-                </div>
-                <div class="faq-answer">
-                    <p>We welcome feedback! Here's how to get in touch:</p>
-                    <ol>
-                        <li><strong>GitHub Issues:</strong> Best for bug reports and feature requests</li>
-                        <li><strong>Email:</strong> <a href="mailto:markview.app@gmail.com" style="color: var(--primary);">markview.app@gmail.com</a></li>
-                        <li><strong>Chrome Web Store:</strong> Leave a review (we read all of them!)</li>
-                    </ol>
-                    <p><strong>When reporting bugs, please include:</strong></p>
-                    <ul>
-                        <li>Chrome version</li>
-                        <li>MarkView version</li>
-                        <li>Steps to reproduce</li>
-                        <li>Expected vs actual behavior</li>
-                        <li>Screenshots (if applicable)</li>
-                    </ul>
+                <div class="support-card">
+                    <div class="support-card-icon green">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                            <polyline points="17 8 12 3 7 8" />
+                            <line x1="12" y1="3" x2="12" y2="15" />
+                        </svg>
+                    </div>
+                    <h3>Feature Request</h3>
+                    <p>Have an idea? We'd love to hear your suggestions</p>
+                    <a href="mailto:markview.app@gmail.com?subject=Feature%20Request" class="btn btn-secondary">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M12 20h9" />
+                            <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z" />
+                        </svg>
+                        Submit Idea
+                    </a>
                 </div>
             </div>
         </div>
+    </section>
 
-        <!-- Still Need Help -->
-        <div class="cta" style="margin-top: var(--spacing-2xl); border-radius: var(--radius-xl);">
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <p class="section-subtitle">Quick answers to common questions</p>
+            </div>
+
+            <div class="faq-container">
+                <!-- Installation & Setup -->
+                <div class="faq-category">
+                    <h3 class="faq-category-title">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                            <polyline points="7 10 12 15 17 10" />
+                            <line x1="12" y1="15" x2="12" y2="3" />
+                        </svg>
+                        Installation & Setup
+                    </h3>
+
+                    <div class="faq-item">
+                        <div class="faq-question">How do I enable file URL access for local markdown files?</div>
+                        <div class="faq-answer">
+                            <p>To view local .md files from your computer:</p>
+                            <ol>
+                                <li>Open Chrome and navigate to <code>chrome://extensions/</code></li>
+                                <li>Find <strong>MarkView</strong> in your extensions list</li>
+                                <li>Click the <strong>"Details"</strong> button</li>
+                                <li>Scroll down to find <strong>"Allow access to file URLs"</strong></li>
+                                <li>Toggle the switch to <strong>ON</strong> (blue)</li>
+                            </ol>
+                            <p>Now you can drag-and-drop local .md files into Chrome or open them with File → Open File
+                                (<code>Ctrl+O</code>).</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">Can I use MarkView with GitHub markdown files?</div>
+                        <div class="faq-answer">
+                            <p><strong>Yes!</strong> But you need to view the <strong>raw</strong> markdown file, not
+                                GitHub's rendered HTML page.</p>
+                            <p><strong>How to do it:</strong></p>
+                            <ol>
+                                <li>Open a markdown file on GitHub (e.g., README.md)</li>
+                                <li>Click the <strong>"Raw"</strong> button in the top-right corner</li>
+                                <li>MarkView will automatically render the raw markdown beautifully</li>
+                            </ol>
+                            <p><strong>URL Examples:</strong></p>
+                            <ul>
+                                <li>❌ Won't work: <code>github.com/user/repo/blob/main/README.md</code></li>
+                                <li>✅ Will work: <code>raw.githubusercontent.com/user/repo/main/README.md</code></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Themes & Customization -->
+                <div class="faq-category">
+                    <h3 class="faq-category-title">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <circle cx="12" cy="12" r="3" />
+                            <path
+                                d="M12 1v6m0 6v6M5.64 5.64l4.24 4.24m4.24 4.24l4.24 4.24M1 12h6m6 0h6M5.64 18.36l4.24-4.24m4.24-4.24l4.24-4.24" />
+                        </svg>
+                        Themes & Customization
+                    </h3>
+
+                    <div class="faq-item">
+                        <div class="faq-question">How do I switch between dark and light themes?</div>
+                        <div class="faq-answer">
+                            <p><strong>Method 1: Extension Popup</strong></p>
+                            <ol>
+                                <li>Click the <strong>MarkView icon</strong> in Chrome's toolbar</li>
+                                <li>Find the <strong>"Theme"</strong> dropdown in the popup</li>
+                                <li>Select <strong>Dark</strong>, <strong>Light</strong>, or <strong>Auto</strong>
+                                    (follows system preference)</li>
+                            </ol>
+                            <p><strong>Method 2: Keyboard Shortcut</strong></p>
+                            <ul>
+                                <li>Press <code>Ctrl+Shift+T</code> (Windows/Linux)</li>
+                                <li>Press <code>Cmd+Shift+T</code> (Mac)</li>
+                            </ul>
+                            <p>Your theme preference is saved automatically and applies to all markdown files.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">Can I customize fonts, sizes, and layout?</div>
+                        <div class="faq-answer">
+                            <p><strong>Absolutely!</strong> MarkView offers extensive customization options:</p>
+                            <ul>
+                                <li><strong>Font Family:</strong> Choose from 9 beautiful fonts including Inter,
+                                    Merriweather, Roboto, Open Sans, Lora, Source Sans, Georgia, Crimson, and System
+                                    Default</li>
+                                <li><strong>Font Size:</strong> Adjust from 12px to 24px with a slider</li>
+                                <li><strong>Line Height:</strong> Control spacing between lines (1.0 to 2.5)</li>
+                                <li><strong>Max Width:</strong> Set content width from 600px to 1200px</li>
+                                <li><strong>Centered Layout:</strong> Toggle centered vs full-width layout</li>
+                            </ul>
+                            <p>All settings are accessible from the extension popup and saved automatically.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Features & Functionality -->
+                <div class="faq-category">
+                    <h3 class="faq-category-title">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
+                        </svg>
+                        Features & Functionality
+                    </h3>
+
+                    <div class="faq-item">
+                        <div class="faq-question">Does auto-refresh work with local files?</div>
+                        <div class="faq-answer">
+                            <p><strong>No</strong>, auto-refresh only works with external URLs (HTTP/HTTPS) due to
+                                Chrome security restrictions.</p>
+                            <p><strong>For local files (<code>file:///</code>):</strong></p>
+                            <ul>
+                                <li>You need to manually refresh (press <code>F5</code>) after editing</li>
+                                <li>Chrome doesn't allow extensions to monitor local file changes</li>
+                            </ul>
+                            <p><strong>For external files (GitHub, etc.):</strong></p>
+                            <ul>
+                                <li>Enable auto-refresh in the popup settings</li>
+                                <li>The page will check for updates every 2 seconds</li>
+                                <li>Changes are applied automatically</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">How do I show/hide the Table of Contents?</div>
+                        <div class="faq-answer">
+                            <p>The TOC sidebar appears automatically for markdown files with headings.</p>
+                            <p><strong>To toggle visibility:</strong></p>
+                            <ul>
+                                <li>Click the <strong>TOC button</strong> (≡ icon) in the top-right corner</li>
+                                <li>Or press <code>Ctrl+Shift+O</code> (Windows/Linux) / <code>Cmd+Shift+O</code> (Mac)
+                                </li>
+                            </ul>
+                            <p><strong>Features:</strong></p>
+                            <ul>
+                                <li>Automatically highlights current section as you scroll</li>
+                                <li>Click any heading to jump to that section</li>
+                                <li>Shows nested heading structure</li>
+                                <li>Visibility preference is saved</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">Can I view images in fullscreen?</div>
+                        <div class="faq-answer">
+                            <p><strong>Yes!</strong> MarkView includes a powerful image viewer.</p>
+                            <p><strong>How to use:</strong></p>
+                            <ol>
+                                <li>Click any image in the markdown document</li>
+                                <li>Image opens in fullscreen lightbox</li>
+                                <li>Use arrow keys or on-screen buttons to navigate between images</li>
+                                <li>Press <code>Esc</code> or click the close button to exit</li>
+                            </ol>
+                            <p><strong>Features:</strong></p>
+                            <ul>
+                                <li>Fullscreen viewing with dark overlay</li>
+                                <li>Gallery navigation (next/previous)</li>
+                                <li>Lazy loading for performance</li>
+                                <li>Keyboard navigation support</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">What markdown features are supported?</div>
+                        <div class="faq-answer">
+                            <p>MarkView supports <strong>GitHub Flavored Markdown (GFM)</strong> and advanced features:
+                            </p>
+                            <p><strong>Standard Markdown:</strong></p>
+                            <ul>
+                                <li>✅ Headings (H1-H6)</li>
+                                <li>✅ Bold, italic, strikethrough formatting</li>
+                                <li>✅ Ordered and unordered lists (with nesting)</li>
+                                <li>✅ Task lists with checkboxes</li>
+                                <li>✅ Links and images (inline and reference style)</li>
+                                <li>✅ Blockquotes</li>
+                                <li>✅ Horizontal rules</li>
+                                <li>✅ Inline code and code blocks</li>
+                            </ul>
+                            <p><strong>Advanced Features:</strong></p>
+                            <ul>
+                                <li>✅ Syntax highlighting for 180+ languages</li>
+                                <li>✅ Tables with alignment</li>
+                                <li>✅ Mermaid diagrams (flowcharts, sequence, Gantt, etc.)</li>
+                                <li>✅ KaTeX math equations (inline and block)</li>
+                                <li>✅ Emoji :smile: :rocket:</li>
+                                <li>✅ HTML (rendered as-is)</li>
+                                <li>✅ Footnotes</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Troubleshooting -->
+                <div class="faq-category">
+                    <h3 class="faq-category-title">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <circle cx="12" cy="12" r="10" />
+                            <line x1="4.93" y1="4.93" x2="19.07" y2="19.07" />
+                        </svg>
+                        Troubleshooting
+                    </h3>
+
+                    <div class="faq-item">
+                        <div class="faq-question">Why aren't my Mermaid diagrams rendering?</div>
+                        <div class="faq-answer">
+                            <p>If Mermaid diagrams aren't showing, try these solutions:</p>
+                            <ol>
+                                <li><strong>Check syntax:</strong> Ensure your Mermaid code is valid. Test it at <a
+                                        href="https://mermaid.live" target="_blank" rel="noopener">mermaid.live</a></li>
+                                <li><strong>Verify code block:</strong> Use triple backticks with <code>mermaid</code>
+                                    language identifier:
+                                    <pre><code>```mermaid
+graph TD
+    A --> B
+```</code></pre>
+                                </li>
+                                <li><strong>Refresh page:</strong> Press <code>F5</code> to reload</li>
+                                <li><strong>Check console:</strong> Press <code>F12</code> to open DevTools and look for
+                                    error messages</li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">Math equations aren't displaying correctly</div>
+                        <div class="faq-answer">
+                            <p>For KaTeX math rendering issues:</p>
+                            <p><strong>Inline Math:</strong> Use single dollar signs:</p>
+                            <pre><code>Einstein's equation is $E = mc^2$</code></pre>
+                            <p><strong>Block Math:</strong> Use double dollar signs:</p>
+                            <pre><code>$$
+\int_{a}^{b} x^2 \,dx = \frac{x^3}{3} \Big|_a^b
+$$</code></pre>
+                            <p><strong>Common issues:</strong></p>
+                            <ul>
+                                <li>Ensure LaTeX syntax is valid</li>
+                                <li>Escape special characters when needed</li>
+                                <li>Use <code>\\</code> for line breaks in block equations</li>
+                                <li>Test equations at <a href="https://katex.org/" target="_blank"
+                                        rel="noopener">katex.org</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">Extension not working after Chrome update</div>
+                        <div class="faq-answer">
+                            <p>If MarkView stops working after a Chrome update:</p>
+                            <ol>
+                                <li><strong>Reload the extension:</strong> Go to <code>chrome://extensions/</code>, find
+                                    MarkView, click the reload icon</li>
+                                <li><strong>Clear cache:</strong> In Chrome settings, clear browsing data (cached images
+                                    and files)</li>
+                                <li><strong>Reinstall:</strong> Remove and reinstall MarkView from Chrome Web Store</li>
+                                <li><strong>Check for updates:</strong> Ensure you have the latest version of MarkView
+                                </li>
+                                <li><strong>Contact support:</strong> If issues persist, email us at <a
+                                        href="mailto:markview.app@gmail.com">markview.app@gmail.com</a></li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Privacy & Security -->
+                <div class="faq-category">
+                    <h3 class="faq-category-title">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                        </svg>
+                        Privacy & Security
+                    </h3>
+
+                    <div class="faq-item">
+                        <div class="faq-question">Does MarkView collect my data?</div>
+                        <div class="faq-answer">
+                            <p><strong>No.</strong> MarkView does NOT collect any personal data whatsoever.</p>
+                            <p><strong>What we DON'T collect:</strong></p>
+                            <ul>
+                                <li>❌ Your markdown file contents</li>
+                                <li>❌ Browsing history or URLs</li>
+                                <li>❌ Personal information</li>
+                                <li>❌ Analytics or usage statistics</li>
+                                <li>❌ IP addresses or device data</li>
+                            </ul>
+                            <p><strong>What stays on your device:</strong></p>
+                            <ul>
+                                <li>✅ Theme preferences</li>
+                                <li>✅ Font and layout settings</li>
+                                <li>✅ Feature toggles</li>
+                            </ul>
+                            <p>All processing happens locally in your browser. Read our full <a
+                                    href="privacy-policy.html">Privacy Policy</a> for details.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">Is it safe to open markdown files with MarkView?</div>
+                        <div class="faq-answer">
+                            <p>MarkView renders markdown as-is, including any HTML or JavaScript code it contains.</p>
+                            <p><strong>Safety guidelines:</strong></p>
+                            <ul>
+                                <li>✅ Safe: Markdown files from trusted sources (your own, official documentation)</li>
+                                <li>⚠️ Caution: Files from unknown sources or untrusted websites</li>
+                                <li>❌ Avoid: Files that could contain malicious code</li>
+                            </ul>
+                            <p><strong>Best practices:</strong></p>
+                            <ul>
+                                <li>Only open markdown files you trust</li>
+                                <li>Be cautious with files containing embedded HTML/JavaScript</li>
+                                <li>Keep Chrome and MarkView updated</li>
+                                <li>Use antivirus software for downloaded files</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- General -->
+                <div class="faq-category">
+                    <h3 class="faq-category-title">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <circle cx="12" cy="12" r="10" />
+                            <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" />
+                            <line x1="12" y1="17" x2="12.01" y2="17" />
+                        </svg>
+                        General Questions
+                    </h3>
+
+                    <div class="faq-item">
+                        <div class="faq-question">Can I print markdown documents?</div>
+                        <div class="faq-answer">
+                            <p><strong>Yes!</strong> MarkView is fully print-friendly.</p>
+                            <p><strong>How to print:</strong></p>
+                            <ol>
+                                <li>Press <code>Ctrl+P</code> (Windows/Linux) or <code>Cmd+P</code> (Mac)</li>
+                                <li>Chrome's print dialog opens</li>
+                                <li>MarkView automatically loads all lazy-loaded images</li>
+                                <li>Sidebars and UI elements are hidden in print view</li>
+                                <li>Choose "Print" or "Save as PDF"</li>
+                            </ol>
+                            <p>The printed output is clean and professional, perfect for documentation or reports.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">How do I report bugs or request features?</div>
+                        <div class="faq-answer">
+                            <p>We welcome your feedback! Here's how to reach us:</p>
+                            <p><strong>Bug Reports:</strong></p>
+                            <ul>
+                                <li>Email: <a
+                                        href="mailto:markview.app@gmail.com?subject=Bug%20Report">markview.app@gmail.com</a>
+                                </li>
+                                <li>Include: Chrome version, MarkView version, steps to reproduce, screenshots</li>
+                            </ul>
+                            <p><strong>Feature Requests:</strong></p>
+                            <ul>
+                                <li>Email: <a
+                                        href="mailto:markview.app@gmail.com?subject=Feature%20Request">markview.app@gmail.com</a>
+                                </li>
+                                <li>Describe the feature and why it would be useful</li>
+                            </ul>
+                            <p><strong>General Questions:</strong></p>
+                            <ul>
+                                <li>Check this FAQ first</li>
+                                <li>Email us if you can't find your answer</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">Is MarkView free?</div>
+                        <div class="faq-answer">
+                            <p><strong>Yes!</strong> MarkView is currently free to use with all features included.</p>
+                            <p><strong>What's included for free:</strong></p>
+                            <ul>
+                                <li>✅ All markdown rendering features</li>
+                                <li>✅ Syntax highlighting (180+ languages)</li>
+                                <li>✅ Mermaid diagrams</li>
+                                <li>✅ KaTeX math equations</li>
+                                <li>✅ Full customization options</li>
+                                <li>✅ No ads or tracking</li>
+                                <li>✅ All future updates</li>
+                            </ul>
+                            <p><strong>Future plans:</strong> We may introduce optional premium features in the future,
+                                but all current features will remain free.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Still Need Help CTA -->
+    <section class="cta">
+        <div class="container">
             <div class="cta-content">
                 <h2>Still Need Help?</h2>
-                <p>Don't hesitate to reach out. We're here to help!</p>
-                <a href="mailto:markview.app@gmail.com" class="btn btn-primary btn-large">Contact Support</a>
+                <p>Can't find the answer you're looking for? We're here to help!</p>
+                <a href="mailto:markview.app@gmail.com" class="btn btn-primary btn-lg">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                        <polyline points="22,6 12,13 2,6" />
+                    </svg>
+                    Contact Support
+                </a>
+                <p class="cta-note">We typically respond within 24-48 hours</p>
             </div>
         </div>
-    </div>
+    </section>
 
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <img src="assets/logo.svg" alt="MarkView Logo" width="28" height="28">
+                        <span>MarkView</span>
+                    </div>
+                    <p class="footer-tagline">Beautiful markdown viewing for everyone</p>
+                </div>
+
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Product</h4>
+                        <ul>
+                            <li><a href="index.html#features">Features</a></li>
+                            <li><a href="index.html#showcase">Showcase</a></li>
+                            <li><a href="#">Changelog</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-column">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li><a href="support.html">Support</a></li>
+                            <li><a href="#">Documentation</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-column">
+                        <h4>Legal</h4>
+                        <ul>
+                            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                            <li><a href="terms.html">Terms of Service</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
             <div class="footer-bottom">
                 <p>&copy; 2025 MarkView. All rights reserved.</p>
-                <p>
-                    <a href="index.html">Home</a> •
-                    <a href="privacy-policy.html">Privacy</a> •
-                    <a href="terms.html">Terms</a> •
-                    <a href="support.html">Support</a>
-                </p>
             </div>
         </div>
     </footer>
+
+    <script src="script.js"></script>
 </body>
+
 </html>

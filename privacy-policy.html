@@ -1,275 +1,403 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy - MarkView</title>
+
+    <!-- Primary Meta Tags -->
+    <title>Privacy Policy - MarkView | No Data Collection, Complete Privacy</title>
+    <meta name="title" content="Privacy Policy - MarkView | No Data Collection, Complete Privacy">
+    <meta name="description"
+        content="MarkView Privacy Policy: We don't collect, store, or transmit any of your data. Complete transparency about permissions, third-party services, and your privacy rights. GDPR & CCPA compliant.">
+    <meta name="robots" content="index, follow">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://getmarkview.github.io/privacy-policy.html">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://getmarkview.github.io/privacy-policy.html">
+    <meta property="og:title" content="Privacy Policy - MarkView">
+    <meta property="og:description"
+        content="MarkView Privacy Policy: We don't collect, store, or transmit your data. Complete privacy protection.">
+    <meta property="og:site_name" content="MarkView">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary">
+    <meta property="twitter:url" content="https://getmarkview.github.io/privacy-policy.html">
+    <meta property="twitter:title" content="Privacy Policy - MarkView">
+    <meta property="twitter:description"
+        content="MarkView Privacy Policy: We don't collect, store, or transmit your data. Complete privacy protection.">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/logo.svg">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#667eea" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#0d1117" media="(prefers-color-scheme: dark)">
+
+    <!-- Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <style>
-        .privacy-container {
-            max-width: 800px;
-            margin: 120px auto 60px;
-            padding: 0 var(--spacing-md);
-        }
-        .privacy-header {
-            text-align: center;
-            margin-bottom: var(--spacing-xl);
-        }
-        .privacy-content h2 {
-            font-size: 1.75rem;
-            font-weight: 700;
-            margin-top: var(--spacing-xl);
-            margin-bottom: var(--spacing-md);
-            color: var(--gray-900);
-        }
-        .privacy-content h3 {
-            font-size: 1.25rem;
-            font-weight: 600;
-            margin-top: var(--spacing-lg);
-            margin-bottom: var(--spacing-sm);
-            color: var(--gray-800);
-        }
-        .privacy-content p {
-            margin-bottom: var(--spacing-md);
-            color: var(--gray-700);
-            line-height: 1.8;
-        }
-        .privacy-content ul, .privacy-content ol {
-            margin-bottom: var(--spacing-md);
-            margin-left: var(--spacing-lg);
-            color: var(--gray-700);
-            line-height: 1.8;
-        }
-        .privacy-content li {
-            margin-bottom: var(--spacing-xs);
-        }
-        .privacy-content strong {
-            color: var(--gray-900);
-            font-weight: 600;
-        }
-        .privacy-content code {
-            background: var(--gray-100);
-            padding: 0.125rem 0.375rem;
-            border-radius: var(--radius-sm);
-            font-family: 'Monaco', 'Courier New', monospace;
-            font-size: 0.875em;
-            color: var(--primary);
-        }
-        .last-updated {
-            background: var(--gray-100);
-            padding: var(--spacing-sm) var(--spacing-md);
-            border-radius: var(--radius-lg);
-            margin-bottom: var(--spacing-xl);
-            text-align: center;
-            color: var(--gray-600);
-            font-weight: 500;
-        }
-        .highlight-box {
-            background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
-            border-left: 4px solid var(--primary);
-            padding: var(--spacing-md);
-            border-radius: var(--radius-md);
-            margin: var(--spacing-lg) 0;
-        }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
     <!-- Navigation -->
     <nav class="navbar">
         <div class="container">
             <div class="nav-content">
                 <a href="index.html" class="logo">
-                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect width="32" height="32" rx="8" fill="url(#gradient)"/>
-                        <path d="M8 12L12 8L16 12M16 20L12 24L8 20M24 12L20 8L16 12M16 20L20 24L24 20" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        <defs>
-                            <linearGradient id="gradient" x1="0" y1="0" x2="32" y2="32">
-                                <stop offset="0%" stop-color="#667eea"/>
-                                <stop offset="100%" stop-color="#764ba2"/>
-                            </linearGradient>
-                        </defs>
-                    </svg>
+                    <img src="assets/logo.svg" alt="MarkView Logo" width="32" height="32">
                     <span class="logo-text">MarkView</span>
                 </a>
-                <div class="nav-links">
+                <div class="nav-links desktop-only">
                     <a href="index.html">Home</a>
                     <a href="support.html">Support</a>
                     <a href="terms.html">Terms</a>
+                </div>
+                <div class="nav-actions">
+                    <button class="theme-toggle" aria-label="Toggle theme">
+                        <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="5" />
+                            <line x1="12" y1="1" x2="12" y2="3" />
+                            <line x1="12" y1="21" x2="12" y2="23" />
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+                            <line x1="1" y1="12" x2="3" y2="12" />
+                            <line x1="21" y1="12" x2="23" y2="12" />
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+                        </svg>
+                        <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+                        </svg>
+                    </button>
                 </div>
             </div>
         </div>
     </nav>
 
     <!-- Privacy Policy Content -->
-    <div class="privacy-container">
-        <div class="privacy-header">
-            <h1>Privacy Policy</h1>
-            <p style="color: var(--gray-600); font-size: 1.125rem;">Your privacy is important to us</p>
-        </div>
-
-        <div class="last-updated">
-            <strong>Last Updated:</strong> November 19, 2025
-        </div>
-
-        <div class="privacy-content">
-            <div class="highlight-box">
-                <p><strong>TL;DR:</strong> MarkView does NOT collect, store, or transmit any of your personal data. All your settings stay on your device. We respect your privacy completely.</p>
+    <section class="legal-content">
+        <div class="container-narrow">
+            <div class="legal-header">
+                <h1>Privacy Policy</h1>
+                <p class="legal-subtitle">Your privacy is our top priority</p>
+                <div class="legal-updated">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10" />
+                        <polyline points="12 6 12 12 16 14" />
+                    </svg>
+                    <span>Last Updated: November 19, 2025</span>
+                </div>
             </div>
 
-            <h2>1. Introduction</h2>
-            <p>Welcome to MarkView. This Privacy Policy explains how we handle information when you use our Chrome extension ("MarkView", "Extension", "we", "us", or "our").</p>
-            <p>MarkView is designed with privacy as a core principle. We believe your markdown files and browsing habits are your business, not ours.</p>
+            <div class="legal-highlight">
+                <h3>TL;DR - Your Privacy Guaranteed</h3>
+                <p>MarkView does <strong>NOT</strong> collect, store, or transmit any of your personal data. All your
+                    markdown files and settings stay on your device. We respect your privacy completely.</p>
+            </div>
 
-            <h2>2. Information We Do NOT Collect</h2>
-            <p>MarkView does <strong>NOT</strong> collect, store, transmit, or share:</p>
-            <ul>
-                <li>Your markdown file contents</li>
-                <li>Your browsing history or URLs visited</li>
-                <li>Personal identification information (name, email, etc.)</li>
-                <li>Usage statistics or analytics</li>
-                <li>IP addresses or device information</li>
-                <li>Any form of tracking or behavioral data</li>
-            </ul>
+            <div class="legal-body">
+                <h2>1. Introduction</h2>
+                <p>Welcome to MarkView. This Privacy Policy explains how MarkView ("we", "us", "our", or "Extension")
+                    handles information when you use our Chrome browser extension.</p>
+                <p>MarkView is designed with privacy as a core principle. We believe your markdown files and browsing
+                    habits are your business, not ours.</p>
 
-            <h2>3. Local Data Storage</h2>
-            <p>MarkView uses Chrome's local storage API (<code>chrome.storage.local</code>) to save your preferences on your device only. This data includes:</p>
-            <ul>
-                <li>Theme selection (light/dark/auto)</li>
-                <li>Font family choice</li>
-                <li>Font size and line height settings</li>
-                <li>Layout preferences (centered mode, max width)</li>
-                <li>Feature toggles (syntax highlighting, auto-refresh, etc.)</li>
-            </ul>
-            <p><strong>Important:</strong> All this data stays on your device and is never transmitted anywhere. You can clear this data anytime through Chrome's extension settings.</p>
+                <h2>2. Information We Do NOT Collect</h2>
+                <p>MarkView does <strong>NOT</strong> collect, store, transmit, or share any of the following:</p>
+                <ul>
+                    <li>Your markdown file contents or data</li>
+                    <li>Your browsing history or URLs visited</li>
+                    <li>Personal identification information (name, email, address, etc.)</li>
+                    <li>Usage statistics, analytics, or telemetry</li>
+                    <li>IP addresses or device identifiers</li>
+                    <li>Location data</li>
+                    <li>Cookies or tracking data</li>
+                    <li>Any form of behavioral or user activity data</li>
+                </ul>
+                <p class="legal-emphasis">We have no servers, no databases, and no way to access your data. Period.</p>
 
-            <h2>4. Permissions Explained</h2>
-            <p>MarkView requests the following permissions to function properly:</p>
-
-            <h3>4.1 Storage Permission</h3>
-            <p><strong>Why needed:</strong> To save your preferences (theme, font, layout) locally on your device.</p>
-            <p><strong>Data access:</strong> Only reads/writes settings data on your device. No external transmission.</p>
-
-            <h3>4.2 ActiveTab Permission</h3>
-            <p><strong>Why needed:</strong> To access the markdown file content in the currently active tab so we can render it beautifully.</p>
-            <p><strong>Data access:</strong> Only accesses the markdown file you're viewing. Processing happens entirely in your browser.</p>
-
-            <h3>4.3 File URL Access (file:///)</h3>
-            <p><strong>Why needed:</strong> To read and render local markdown files (.md files on your computer).</p>
-            <p><strong>Data access:</strong> Only accesses files when you explicitly open them. Requires manual activation in extension settings.</p>
-            <p><strong>Note:</strong> This permission must be manually enabled by you in Chrome's extension settings.</p>
-
-            <h3>4.4 Host Permissions (*://*/)</h3>
-            <p><strong>Why needed:</strong> To fetch external markdown files from GitHub, GitLab, and other websites for the auto-refresh feature.</p>
-            <p><strong>Data access:</strong> Only fetches the specific markdown file URL you're viewing, and only when auto-refresh is enabled.</p>
-
-            <h2>5. Third-Party Services</h2>
-
-            <h3>5.1 Google Fonts</h3>
-            <p>MarkView loads custom fonts from Google Fonts CDN (<code>fonts.googleapis.com</code>) to provide beautiful typography options. When you use a custom font:</p>
-            <ul>
-                <li>Your browser makes a request to Google's servers to download the font files</li>
-                <li>Google may log this request as part of their standard CDN operations</li>
-                <li>This is a standard web service used by millions of websites</li>
-                <li>Google's privacy policy applies to this service</li>
-            </ul>
-            <p><strong>Note:</strong> If you select the "Default" font option, no external fonts are loaded.</p>
-
-            <h3>5.2 External Markdown Sources</h3>
-            <p>When you view markdown files from external sources (GitHub, GitLab, etc.):</p>
-            <ul>
-                <li>Your browser fetches the file directly from that source</li>
-                <li>MarkView does not proxy or store these files</li>
-                <li>The privacy policies of those platforms apply</li>
-                <li>No data about your viewing is sent to MarkView</li>
-            </ul>
-
-            <h2>6. Data Security</h2>
-            <p>Since MarkView doesn't collect or transmit your data, there's no central database or server that could be compromised. Your data security is as strong as your device's security.</p>
-            <p>All processing happens locally in your browser using standard Chrome extension APIs.</p>
-
-            <h2>7. Children's Privacy</h2>
-            <p>MarkView does not collect any information from anyone, including children under 13. The extension is safe for users of all ages.</p>
-
-            <h2>8. Changes to This Privacy Policy</h2>
-            <p>We may update this Privacy Policy from time to time to reflect changes in:</p>
-            <ul>
-                <li>Our extension's features</li>
-                <li>Legal or regulatory requirements</li>
-                <li>Industry best practices</li>
-            </ul>
-            <p>When we make changes, we will:</p>
-            <ul>
-                <li>Update the "Last Updated" date at the top of this page</li>
-                <li>Notify users through the extension update notes (if significant changes)</li>
-            </ul>
-            <p>We encourage you to review this Privacy Policy periodically.</p>
-
-            <h2>9. Your Rights</h2>
-            <p>You have the right to:</p>
-            <ul>
-                <li><strong>Access your data:</strong> All your settings are stored locally in Chrome. You can view them in <code>chrome://extensions</code> → MarkView → Storage</li>
-                <li><strong>Delete your data:</strong> Right-click the extension icon → Remove from Chrome, or clear site data in Chrome settings</li>
-                <li><strong>Opt-out:</strong> Simply don't use the extension, or disable specific features in settings</li>
-            </ul>
-
-            <h2>10. California Privacy Rights (CCPA)</h2>
-            <p>Under the California Consumer Privacy Act (CCPA), California residents have specific rights regarding their personal information. However, since MarkView does not collect personal information, these rights are not applicable.</p>
-
-            <h2>11. European Privacy Rights (GDPR)</h2>
-            <p>Under the General Data Protection Regulation (GDPR), European users have specific rights regarding their personal data. However, since MarkView does not collect personal information, GDPR obligations regarding data collection, storage, and processing do not apply.</p>
-
-            <h2>12. Contact Us</h2>
-            <p>If you have questions or concerns about this Privacy Policy or MarkView's privacy practices, please contact us:</p>
-            <ul>
-                <li><strong>Email:</strong> [markview.app@gmail.com]</li>
-                <li><strong>Support Page:</strong> <a href="support.html">MarkView Support</a></li>
-                <li><strong>GitHub Issues:</strong> [Your GitHub Issues URL]</li>
-            </ul>
-
-            <h2>13. Open Source & Transparency</h2>
-            <p>While MarkView's source code is not publicly available, we are committed to transparency about our privacy practices. The Chrome Web Store package contains the compiled extension code that Chrome reviews before publication.</p>
-            <p>You can verify that the extension only accesses the permissions listed above through Chrome's extension details page.</p>
-
-            <h2>14. Legal Basis for Processing (GDPR)</h2>
-            <p>Although we don't collect personal data, the local storage of preferences is based on:</p>
-            <ul>
-                <li><strong>Legitimate Interest:</strong> Providing a personalized markdown viewing experience</li>
-                <li><strong>User Consent:</strong> By installing and using the extension</li>
-            </ul>
-
-            <h2>15. Disclaimer</h2>
-            <p>MarkView is provided "as-is" without any warranties. While we take privacy seriously, users are responsible for:</p>
-            <ul>
-                <li>Securing their own devices</li>
-                <li>Being aware of what markdown files they open</li>
-                <li>Understanding that external markdown sources (GitHub, etc.) have their own privacy policies</li>
-            </ul>
-
-            <div class="highlight-box" style="margin-top: var(--spacing-xl);">
-                <h3 style="margin-top: 0;">Summary</h3>
-                <p style="margin-bottom: 0;">
-                    <strong>MarkView respects your privacy completely.</strong> We don't collect your data. We don't track you.
-                    We don't sell anything. We're just here to make your markdown files look beautiful.
-                    Your files, your settings, your privacy – all stay with you.
+                <h2>3. Local Data Storage</h2>
+                <p>MarkView uses Chrome's local storage API (<code>chrome.storage.local</code>) to save your preferences
+                    <strong>on your device only</strong>. This locally stored data includes:
                 </p>
+                <ul>
+                    <li>Theme preference (dark/light/auto)</li>
+                    <li>Font family selection</li>
+                    <li>Font size and line height preferences</li>
+                    <li>Layout settings (centered mode, max width)</li>
+                    <li>Sidebar visibility preferences</li>
+                    <li>Feature toggles (syntax highlighting, auto-refresh, etc.)</li>
+                </ul>
+
+                <div class="legal-note">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10" />
+                        <line x1="12" y1="16" x2="12" y2="12" />
+                        <line x1="12" y1="8" x2="12.01" y2="8" />
+                    </svg>
+                    <div>
+                        <strong>Important:</strong> All this data remains on your device and is never transmitted
+                        anywhere. You can clear this data anytime through Chrome's extension settings or by uninstalling
+                        the extension.
+                    </div>
+                </div>
+
+                <h2>4. Chrome Permissions Explained</h2>
+                <p>MarkView requests specific Chrome permissions to function. Here's exactly why each permission is
+                    needed and what data we access:</p>
+
+                <h3>4.1 Storage Permission (<code>storage</code>)</h3>
+                <p><strong>Purpose:</strong> To save your preferences locally on your device.</p>
+                <p><strong>Data Access:</strong> Only reads and writes your settings (theme, font, etc.) to local
+                    storage. No external transmission occurs.</p>
+                <p><strong>Scope:</strong> Limited to extension settings only.</p>
+
+                <h3>4.2 ActiveTab Permission (<code>activeTab</code>)</h3>
+                <p><strong>Purpose:</strong> To access markdown file content in the currently active tab for rendering.
+                </p>
+                <p><strong>Data Access:</strong> Only reads the markdown file content you're viewing. All processing
+                    happens entirely in your browser.</p>
+                <p><strong>Scope:</strong> Limited to active tab when extension is invoked.</p>
+
+                <h3>4.3 File URL Access (<code>file:///*</code>)</h3>
+                <p><strong>Purpose:</strong> To read and render local markdown files (.md files) from your computer.</p>
+                <p><strong>Data Access:</strong> Only accesses local files when you explicitly open them in Chrome.</p>
+                <p><strong>User Control:</strong> This permission is <strong>disabled by default</strong> and must be
+                    manually enabled by you in <code>chrome://extensions</code> → MarkView → Details → "Allow access to
+                    file URLs".</p>
+
+                <h3>4.4 Host Permissions (<code>&lt;all_urls&gt;</code>)</h3>
+                <p><strong>Purpose:</strong> To render markdown files from any website (GitHub, GitLab, documentation
+                    sites, etc.).</p>
+                <p><strong>Data Access:</strong> Only reads markdown content from URLs you visit. Processing is local.
+                </p>
+                <p><strong>Note:</strong> We don't intercept or modify other web pages. The extension only activates on
+                    markdown files.</p>
+
+                <h2>5. Third-Party Services</h2>
+                <p>MarkView uses minimal third-party services. Here's what you should know:</p>
+
+                <h3>5.1 Google Fonts CDN</h3>
+                <p>When you select a custom font (other than "Default"), MarkView loads font files from Google Fonts CDN
+                    (<code>fonts.googleapis.com</code>).</p>
+                <p><strong>What this means:</strong></p>
+                <ul>
+                    <li>Your browser makes a request to Google's servers to download font files</li>
+                    <li>Google may log this request (IP address, timestamp) as part of standard CDN operations</li>
+                    <li>This is a standard service used by millions of websites worldwide</li>
+                    <li>Google's privacy policy applies: <a href="https://policies.google.com/privacy" target="_blank"
+                            rel="noopener">https://policies.google.com/privacy</a></li>
+                </ul>
+                <p><strong>How to avoid:</strong> Select the "Default" font option to prevent any external font
+                    requests.</p>
+
+                <h3>5.2 External Markdown Sources</h3>
+                <p>When you view markdown files from external websites (GitHub, GitLab, etc.):</p>
+                <ul>
+                    <li>Your browser fetches the file directly from that website</li>
+                    <li>MarkView does not proxy, cache, or store these files</li>
+                    <li>The privacy policies of those platforms apply</li>
+                    <li>MarkView does not send any information about your viewing to those platforms</li>
+                </ul>
+
+                <h3>5.3 No Analytics or Tracking Services</h3>
+                <p>MarkView does <strong>NOT</strong> use:</p>
+                <ul>
+                    <li>Google Analytics</li>
+                    <li>Facebook Pixel</li>
+                    <li>Crash reporting services (Sentry, Bugsnag, etc.)</li>
+                    <li>User behavior tracking</li>
+                    <li>A/B testing tools</li>
+                    <li>Any other third-party analytics or tracking services</li>
+                </ul>
+
+                <h2>6. Data Security</h2>
+                <p>Since MarkView doesn't collect or transmit your data, there's no central database or server that
+                    could be compromised. Your data security is as strong as your device's security.</p>
+                <p><strong>Security measures:</strong></p>
+                <ul>
+                    <li>All processing happens locally in your browser</li>
+                    <li>Settings are encrypted by Chrome's built-in storage encryption</li>
+                    <li>No network transmission of personal data</li>
+                    <li>Extension code is reviewed by Google before publication</li>
+                    <li>Regular security updates through Chrome Web Store</li>
+                </ul>
+
+                <h2>7. Children's Privacy (COPPA Compliance)</h2>
+                <p>MarkView does not collect any information from anyone, including children under 13 years of age. The
+                    extension is safe for users of all ages and complies with the Children's Online Privacy Protection
+                    Act (COPPA).</p>
+
+                <h2>8. Data Retention</h2>
+                <p>Since we don't collect data, we don't retain data. Your locally stored preferences remain on your
+                    device until:</p>
+                <ul>
+                    <li>You clear Chrome's extension data</li>
+                    <li>You uninstall the extension</li>
+                    <li>You manually reset settings in the extension popup</li>
+                </ul>
+
+                <h2>9. Your Rights and Control</h2>
+                <p>You have complete control over your data:</p>
+
+                <h3>9.1 Access Your Data</h3>
+                <p>All your settings are stored locally. You can view them:</p>
+                <ul>
+                    <li>In the extension popup (click the extension icon)</li>
+                    <li>In Chrome DevTools: <code>chrome.storage.local.get()</code></li>
+                </ul>
+
+                <h3>9.2 Delete Your Data</h3>
+                <p>You can delete all extension data by:</p>
+                <ul>
+                    <li>Uninstalling the extension (right-click icon → Remove from Chrome)</li>
+                    <li>Clearing site data in Chrome settings</li>
+                    <li>Using the "Reset to Defaults" button in extension settings</li>
+                </ul>
+
+                <h3>9.3 Export Your Settings</h3>
+                <p>Your settings are not currently exportable, but they're simple preference values you can reconfigure
+                    easily.</p>
+
+                <h3>9.4 Opt-Out</h3>
+                <p>Simply don't use the extension, or disable specific features in the settings popup.</p>
+
+                <h2>10. California Privacy Rights (CCPA)</h2>
+                <p>Under the California Consumer Privacy Act (CCPA), California residents have rights regarding their
+                    personal information. However, since MarkView does not collect personal information, these rights
+                    are not applicable. There is no personal data to:</p>
+                <ul>
+                    <li>Access or download</li>
+                    <li>Delete</li>
+                    <li>Opt-out of sale (we don't sell any data)</li>
+                    <li>Correct or update</li>
+                </ul>
+
+                <h2>11. European Privacy Rights (GDPR)</h2>
+                <p>Under the General Data Protection Regulation (GDPR), European users have specific rights regarding
+                    their personal data. However, since MarkView does not collect, process, or store personal data:</p>
+                <ul>
+                    <li>There is no data controller or processor</li>
+                    <li>No data processing agreements are needed</li>
+                    <li>No data transfer occurs</li>
+                    <li>GDPR obligations regarding data collection don't apply</li>
+                </ul>
+                <p><strong>Legal Basis:</strong> The local storage of preferences operates under "Legitimate Interest"
+                    to provide extension functionality, with implicit consent through installation and use.</p>
+
+                <h2>12. Changes to This Privacy Policy</h2>
+                <p>We may update this Privacy Policy from time to time to reflect:</p>
+                <ul>
+                    <li>Changes in extension features or functionality</li>
+                    <li>Changes in legal or regulatory requirements</li>
+                    <li>Industry best practices</li>
+                </ul>
+                <p><strong>When we make changes:</strong></p>
+                <ul>
+                    <li>We will update the "Last Updated" date at the top of this page</li>
+                    <li>Significant changes will be communicated through extension update notes</li>
+                    <li>Continued use after changes constitutes acceptance</li>
+                </ul>
+                <p>We encourage you to review this Privacy Policy periodically.</p>
+
+                <h2>13. Contact Us</h2>
+                <p>If you have questions, concerns, or requests regarding this Privacy Policy or MarkView's privacy
+                    practices, please contact us:</p>
+                <ul>
+                    <li><strong>Email:</strong> <a href="mailto:markview.app@gmail.com">markview.app@gmail.com</a></li>
+                    <li><strong>Support Page:</strong> <a href="support.html">MarkView Support</a></li>
+                </ul>
+                <p>We will respond to privacy-related inquiries within 30 days.</p>
+
+                <h2>14. Compliance Certifications</h2>
+                <p>MarkView is compliant with:</p>
+                <ul>
+                    <li><strong>Chrome Web Store Policies:</strong> All required permissions are justified and minimal
+                    </li>
+                    <li><strong>GDPR:</strong> No personal data collection</li>
+                    <li><strong>CCPA:</strong> No personal data collection or sale</li>
+                    <li><strong>COPPA:</strong> Safe for children (no data collection)</li>
+                </ul>
+
+                <h2>15. Disclaimer</h2>
+                <p>MarkView is provided "as-is". While we take privacy seriously, users are responsible for:</p>
+                <ul>
+                    <li>Securing their own devices and browsers</li>
+                    <li>Understanding what markdown files they open</li>
+                    <li>Being aware that external markdown sources have their own privacy policies</li>
+                    <li>Reviewing privacy implications of third-party fonts (if used)</li>
+                </ul>
+
+                <div class="legal-summary">
+                    <h3>Privacy Summary</h3>
+                    <p><strong>MarkView respects your privacy completely.</strong> We don't collect your data. We don't
+                        track you. We don't sell anything. We don't have servers. We're just here to make your markdown
+                        files look beautiful.</p>
+                    <p><strong>Your files, your settings, your privacy – all stay with you.</strong></p>
+                </div>
             </div>
         </div>
-    </div>
+    </section>
 
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <img src="assets/logo.svg" alt="MarkView Logo" width="28" height="28">
+                        <span>MarkView</span>
+                    </div>
+                    <p class="footer-tagline">Beautiful markdown viewing for everyone</p>
+                </div>
+
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Product</h4>
+                        <ul>
+                            <li><a href="index.html#features">Features</a></li>
+                            <li><a href="index.html#showcase">Showcase</a></li>
+                            <li><a href="#">Changelog</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-column">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li><a href="support.html">Support</a></li>
+                            <li><a href="#">Documentation</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-column">
+                        <h4>Legal</h4>
+                        <ul>
+                            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                            <li><a href="terms.html">Terms of Service</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
             <div class="footer-bottom">
                 <p>&copy; 2025 MarkView. All rights reserved.</p>
-                <p>
-                    <a href="index.html">Home</a> •
-                    <a href="privacy-policy.html">Privacy</a> •
-                    <a href="terms.html">Terms</a> •
-                    <a href="support.html">Support</a>
-                </p>
             </div>
         </div>
     </footer>
+
+    <script src="script.js"></script>
 </body>
+
 </html>
