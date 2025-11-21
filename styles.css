@@ -586,6 +586,24 @@ a {
 .feature-icon.indigo {
   background: linear-gradient(135deg, #5f72bd 0%, #9b23ea 100%);
 }
+.feature-icon.blue-alt {
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+}
+
+/* Ensure SVG icons have proper contrast in both themes */
+.feature-icon svg {
+  color: white;
+}
+
+/* Dark theme adjustments - lighter icons on vibrant backgrounds work well */
+:root[data-theme='dark'] .feature-icon svg {
+  color: white;
+}
+
+/* Light theme adjustments - keep white for good contrast */
+:root[data-theme='light'] .feature-icon svg {
+  color: white;
+}
 
 .feature-card h3 {
   font-size: 1.25rem;
@@ -807,6 +825,20 @@ a {
   height: 48px;
   margin: 0 auto var(--spacing-md);
   color: var(--primary);
+}
+
+/* Ensure doc icons have proper visibility in both themes */
+.doc-icon svg {
+  color: inherit;
+}
+
+:root[data-theme='dark'] .doc-icon {
+  color: var(--primary);
+}
+
+:root[data-theme='light'] .doc-icon {
+  color: var(--primary);
+  opacity: 0.9;
 }
 
 .doc-card h3 {

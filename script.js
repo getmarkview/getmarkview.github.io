@@ -43,19 +43,24 @@
 
     handleClick(e) {
       const href = e.currentTarget.getAttribute('href');
-      if (href === '#') return;
 
-      e.preventDefault();
-      const target = document.querySelector(href);
+      // Don't handle empty anchors
+      if (!href || href === '#') return;
 
-      if (target) {
-        const navHeight = 64;
-        const targetPosition = target.offsetTop - navHeight;
+      // Only handle internal page anchors, not mailto or other protocols
+      if (href.startsWith('#') && href.length > 1) {
+        const target = document.querySelector(href);
 
-        window.scrollTo({
-          top: targetPosition,
-          behavior: 'smooth',
-        });
+        if (target) {
+          e.preventDefault();
+          const navHeight = 64;
+          const targetPosition = target.offsetTop - navHeight;
+
+          window.scrollTo({
+            top: targetPosition,
+            behavior: 'smooth',
+          });
+        }
       }
     },
   };
@@ -209,6 +214,46 @@
     },
   };
 
+  // Scroll to Top Button
+  const ScrollToTop = {
+    init() {
+      this.button = this.createButton();
+      this.scrollThreshold = 300;
+      document.body.appendChild(this.button);
+
+      window.addEventListener('scroll', () => this.handleScroll(), { passive: true });
+      this.button.addEventListener('click', () => this.scrollToTop());
+    },
+
+    createButton() {
+      const button = document.createElement('button');
+      button.className = 'scroll-to-top';
+      button.setAttribute('aria-label', 'Scroll to top');
+      button.innerHTML = `
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polyline points="18 15 12 9 6 15"></polyline>
+        </svg>
+      `;
+      return button;
+    },
+
+    handleScroll() {
+      const currentScroll = window.pageYOffset;
+      if (currentScroll > this.scrollThreshold) {
+        this.button.classList.add('visible');
+      } else {
+        this.button.classList.remove('visible');
+      }
+    },
+
+    scrollToTop() {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth',
+      });
+    },
+  };
+
   // Analytics (placeholder)
   const Analytics = {
     init() {
@@ -223,7 +268,7 @@
     },
   };
 
-  // Add CSS animations
+  // Add CSS animations and styles
   const style = document.createElement('style');
   style.textContent = `
         @keyframes slideInRight {
@@ -247,6 +292,58 @@
                 transform: translateX(100px);
             }
         }
+
+        /* Scroll to Top Button */
+        .scroll-to-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border: none;
+            color: white;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(20px);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            z-index: 999;
+        }
+
+        .scroll-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .scroll-to-top:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+        }
+
+        .scroll-to-top:active {
+            transform: translateY(-2px);
+        }
+
+        .scroll-to-top svg {
+            color: white;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .scroll-to-top {
+                bottom: 1.5rem;
+                right: 1.5rem;
+                width: 44px;
+                height: 44px;
+            }
+        }
     `;
   document.head.appendChild(style);
 
@@ -259,6 +356,7 @@
     InstallHandler.init();
     AnimationObserver.init();
     LazyLoad.init();
+    ScrollToTop.init();
     Analytics.init();
 
     // Add loaded class to body

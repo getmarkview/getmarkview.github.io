@@ -306,6 +306,30 @@
                             <p>All settings are accessible from the extension popup and saved automatically.</p>
                         </div>
                     </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">Can I change the interface language?</div>
+                        <div class="faq-answer">
+                            <p><strong>Yes!</strong> MarkView supports 7 languages with automatic detection.</p>
+                            <p><strong>Supported Languages:</strong></p>
+                            <ul>
+                                <li>🇬🇧 English (en)</li>
+                                <li>🇻🇳 Vietnamese (vi) - Tiếng Việt</li>
+                                <li>🇯🇵 Japanese (ja) - 日本語</li>
+                                <li>🇰🇷 Korean (ko) - 한국어</li>
+                                <li>🇨🇳 Simplified Chinese (zh_CN) - 简体中文</li>
+                                <li>🇹🇼 Traditional Chinese (zh_TW) - 繁體中文</li>
+                                <li>🇪🇸 Spanish (es) - Español</li>
+                            </ul>
+                            <p><strong>How to change language:</strong></p>
+                            <ol>
+                                <li>Click the MarkView icon in Chrome's toolbar</li>
+                                <li>Find the "Language" selector in the General settings</li>
+                                <li>Choose "Auto" (uses browser language) or select a specific language</li>
+                                <li>The page reloads automatically with the new language</li>
+                            </ol>
+                        </div>
+                    </div>
                 </div>
 
                 <!-- Features & Functionality -->
@@ -321,18 +345,22 @@
                     <div class="faq-item">
                         <div class="faq-question">Does auto-refresh work with local files?</div>
                         <div class="faq-answer">
-                            <p><strong>No</strong>, auto-refresh only works with external URLs (HTTP/HTTPS) due to
-                                Chrome security restrictions.</p>
+                            <p><strong>Yes!</strong> Auto-refresh works for both local and external files.</p>
                             <p><strong>For local files (<code>file:///</code>):</strong></p>
                             <ul>
-                                <li>You need to manually refresh (press <code>F5</code>) after editing</li>
-                                <li>Chrome doesn't allow extensions to monitor local file changes</li>
+                                <li>First, click "Select Folder" in the sidebar and choose the folder containing your
+                                    markdown file</li>
+                                <li>MarkView uses the File System Access API to watch for file changes</li>
+                                <li>Checks every 2 seconds for updates to the file's last modified timestamp</li>
+                                <li>Permission persists across browser sessions (stored in IndexedDB)</li>
+                                <li>⚠️ Note: File must be within the selected folder for auto-refresh to work</li>
                             </ul>
                             <p><strong>For external files (GitHub, etc.):</strong></p>
                             <ul>
                                 <li>Enable auto-refresh in the popup settings</li>
                                 <li>The page will check for updates every 2 seconds</li>
                                 <li>Changes are applied automatically</li>
+                                <li>No folder selection required</li>
                             </ul>
                         </div>
                     </div>

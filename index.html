@@ -9,7 +9,7 @@
     <title>MarkView - Modern Markdown Viewer for Chrome | Syntax Highlighting, Diagrams & Math</title>
     <meta name="title" content="MarkView - Modern Markdown Viewer for Chrome | Syntax Highlighting, Diagrams & Math">
     <meta name="description"
-        content="Transform your markdown files with MarkView - a beautiful Chrome extension featuring syntax highlighting for 180+ languages, Mermaid diagrams, KaTeX math, dark/light themes, and powerful navigation. Free and privacy-first.">
+        content="Transform your markdown files with MarkView - a beautiful Chrome extension featuring syntax highlighting for 180+ languages, Mermaid diagrams, KaTeX math, auto-refresh for local & external files, 7-language support, dark/light themes, and powerful navigation. Free and privacy-first.">
     <meta name="keywords"
         content="markdown viewer, chrome extension, markdown reader, syntax highlighting, mermaid diagrams, katex math, github markdown, markdown to html, markdown preview, dark mode markdown, markdown editor chrome, md viewer, markdown formatter, technical documentation viewer, code highlighting">
     <meta name="author" content="MarkView">
@@ -25,7 +25,7 @@
     <meta property="og:url" content="https://getmarkview.github.io/">
     <meta property="og:title" content="MarkView - Modern Markdown Viewer for Chrome">
     <meta property="og:description"
-        content="Transform your markdown files with beautiful syntax highlighting, Mermaid diagrams, KaTeX math equations, and powerful navigation. Free Chrome extension.">
+        content="Transform your markdown files with beautiful syntax highlighting, Mermaid diagrams, KaTeX math equations, auto-refresh, 7-language support, and powerful navigation. Free Chrome extension.">
     <meta property="og:image" content="https://getmarkview.github.io/assets/og-image.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
@@ -88,7 +88,8 @@
         "Table of contents generation",
         "File browser",
         "Image viewer",
-        "Live preview",
+        "Auto-refresh for local and external files",
+        "Multi-language support (7 languages)",
         "9 font options"
       ],
       "screenshot": "https://getmarkview.github.io/assets/hero-screenshot.png",
@@ -160,7 +161,8 @@
                 </h1>
                 <p class="hero-description">
                     Transform your markdown files into beautifully formatted documents with live preview,
-                    syntax highlighting, diagrams, math equations, and powerful navigation features.
+                    syntax highlighting, diagrams, math equations, multi-language support, and powerful navigation
+                    features.
                 </p>
                 <div class="hero-buttons">
                     <a href="#install" class="btn btn-primary btn-lg">
@@ -320,16 +322,19 @@
                     <p>Live preview that updates automatically as you edit your files</p>
                 </div>
 
-                <!-- Feature 8: Dark Mode -->
+                <!-- Feature 8: Multi-Language Support -->
                 <div class="feature-card">
                     <div class="feature-icon purple-alt">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                             stroke-width="2">
-                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+                            <circle cx="12" cy="12" r="10" />
+                            <line x1="2" y1="12" x2="22" y2="12" />
+                            <path
+                                d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
                         </svg>
                     </div>
-                    <h3>Dark Mode</h3>
-                    <p>Beautiful light/dark themes with theme-aware syntax highlighting</p>
+                    <h3>Multi-Language</h3>
+                    <p>7 languages supported with auto-detection or manual selection</p>
                 </div>
 
                 <!-- Feature 9: Customizable -->
@@ -343,8 +348,9 @@
                         </svg>
                     </div>
                     <h3>Highly Customizable</h3>
-                    <p>9 fonts, adjustable sizes, line heights, and layout preferences</p>
+                    <p>Dark mode, 9 fonts, adjustable sizes, line heights, and layout preferences</p>
                 </div>
+
             </div>
         </div>
     </section>
