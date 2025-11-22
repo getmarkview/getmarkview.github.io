@@ -347,6 +347,49 @@
     `;
   document.head.appendChild(style);
 
+  // Mobile Menu
+  const MobileMenu = {
+    init() {
+      this.toggle = document.querySelector('.mobile-menu-toggle');
+      this.menu = document.querySelector('.mobile-menu');
+      this.backdrop = document.querySelector('.mobile-menu-backdrop');
+      this.links = this.menu?.querySelectorAll('a');
+
+      if (!this.toggle || !this.menu || !this.backdrop) return;
+
+      this.toggle.addEventListener('click', () => this.toggleMenu());
+
+      // Close menu when clicking backdrop
+      this.backdrop.addEventListener('click', () => this.closeMenu());
+
+      // Close menu when clicking on a link
+      this.links?.forEach(link => {
+        link.addEventListener('click', () => this.closeMenu());
+      });
+
+      // Close menu when clicking outside
+      document.addEventListener('click', e => {
+        if (!e.target.closest('.navbar')) {
+          this.closeMenu();
+        }
+      });
+    },
+
+    toggleMenu() {
+      this.toggle.classList.toggle('active');
+      this.menu.classList.toggle('active');
+      this.backdrop.classList.toggle('active');
+      document.body.style.overflow = this.menu.classList.contains('active') ? 'hidden' : '';
+    },
+
+    closeMenu() {
+      this.toggle.classList.remove('active');
+      this.menu.classList.remove('active');
+      this.backdrop.classList.remove('active');
+      document.body.style.overflow = '';
+    },
+  };
+
   // Initialize everything when DOM is ready
   function init() {
     ThemeManager.init();
@@ -357,6 +400,7 @@
     AnimationObserver.init();
     LazyLoad.init();
     ScrollToTop.init();
+    MobileMenu.init();
     Analytics.init();
 
     // Add loaded class to body
