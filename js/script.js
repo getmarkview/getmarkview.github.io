@@ -117,51 +117,6 @@
     },
   };
 
-  // Install Button Handler
-  const InstallHandler = {
-    CHROME_STORE_URL: 'https://chrome.google.com/webstore/detail/YOUR-EXTENSION-ID',
-
-    init() {
-      this.installButtons = document.querySelectorAll('a[href="#install"], .btn-primary[href="#"]');
-      this.installButtons.forEach(btn => {
-        btn.addEventListener('click', e => this.handleClick(e, btn));
-      });
-    },
-
-    handleClick(e, btn) {
-      if (btn.getAttribute('href') === '#' || btn.getAttribute('href') === '#install') {
-        e.preventDefault();
-        // TODO: Replace with actual Chrome Web Store URL after publishing
-        this.showNotification();
-      }
-    },
-
-    showNotification() {
-      const notification = document.createElement('div');
-      notification.style.cssText = `
-                position: fixed;
-                top: 80px;
-                right: 20px;
-                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-                color: white;
-                padding: 1rem 1.5rem;
-                border-radius: 0.75rem;
-                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-                z-index: 1000;
-                animation: slideInRight 0.3s ease;
-                font-weight: 500;
-            `;
-      notification.textContent = 'Coming soon to Chrome Web Store!';
-
-      document.body.appendChild(notification);
-
-      setTimeout(() => {
-        notification.style.animation = 'slideOutRight 0.3s ease';
-        setTimeout(() => notification.remove(), 300);
-      }, 3000);
-    },
-  };
-
   // Intersection Observer for Animations
   const AnimationObserver = {
     init() {
