@@ -119,6 +119,64 @@
     <section class="changelog-container">
         <div class="container" style="max-width: 900px;">
 
+            <!-- Version 1.0.3 - Coming Soon -->
+            <div class="version-card latest">
+                <div class="version-header">
+                    <div class="version-header-left">
+                        <span class="version-badge badge-coming-soon">
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <line x1="12" y1="8" x2="12" y2="12"></line>
+                                <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                            </svg>
+                            Coming Soon
+                        </span>
+                        <h2 class="version-number">Version 1.0.3</h2>
+                    </div>
+                    <div class="version-date">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polyline points="12 6 12 12 16 14"></polyline>
+                        </svg>
+                        Expected: December 2025
+                    </div>
+                </div>
+
+                <div class="version-content">
+                    <div class="changes-section">
+                        <h3 class="changes-title">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="12 6 12 12 16 14"></polyline>
+                            </svg>
+                            Upcoming Features
+                        </h3>
+                        <ul class="changes-list">
+                            <li>Expandable action button with export options (Word, HTML) and print functionality</li>
+                            <li>Recent Documents feature tracking recently opened Markdown files in the popup</li>
+                            <li>GitHub-style alert boxes (Note, Tip, Important, Warning, Caution)</li>
+                            <li>Download Mermaid diagrams as SVG or PNG images</li>
+                        </ul>
+                    </div>
+
+                    <div class="changes-section">
+                        <h3 class="changes-title">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M13 2L3 14h8l-1 8 10-12h-8l1-8z"></path>
+                            </svg>
+                            Planned Improvements
+                        </h3>
+                        <ul class="changes-list">
+                            <li>Redesigned popup interface with modern tab-styled navigation</li>
+                            <li>Quick links to What's New page and Report Issue page in popup</li>
+                            <li>Performance optimization for large documents</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
             <!-- Version 1.0.2 - Latest -->
             <div class="version-card latest">
                 <div class="version-header">
@@ -152,11 +210,9 @@
                             New Features
                         </h3>
                         <ul class="changes-list">
-                            <li>Added GitHub-style alert boxes (Note, Tip, Important, Warning, Caution)</li>
-                            <li>Redesigned popup interface with 2-tab navigation (Recent Documents & Settings)</li>
-                            <li>Added expandable action button on main screen with Export & Print options</li>
-                            <li>Full internationalization support for 11 languages</li>
-                            <li>Added version information and quick links in popup header</li>
+                            <li>Interactive Mermaid diagrams with zoom and pan capabilities</li>
+                            <li>Permission checking system for local file access with warning notifications</li>
+                            <li>Custom favicon icon for browser tab identification</li>
                         </ul>
                     </div>
 
@@ -168,11 +224,12 @@
                             Improvements
                         </h3>
                         <ul class="changes-list">
-                            <li>Enhanced popup UI with better hierarchy and visual separation</li>
-                            <li>Optimized CSS files for better performance (reduced by 7.2%)</li>
-                            <li>Improved icon consistency across all components</li>
-                            <li>Better dark mode support for action menu</li>
-                            <li>Centralized i18n handling with MESSAGES utility</li>
+                            <li>External links now open in new tabs for better navigation</li>
+                            <li>Upgraded Mermaid to v11 with enhanced dark theme styling</li>
+                            <li>Major performance optimizations reducing initial page load time</li>
+                            <li>Implemented settings caching and progressive rendering</li>
+                            <li>Parallel component initialization for faster startup</li>
+                            <li>Asynchronous Mermaid rendering for improved responsiveness</li>
                         </ul>
                     </div>
 
@@ -188,10 +245,7 @@
                             Bug Fixes
                         </h3>
                         <ul class="changes-list">
-                            <li>Fixed double scrollbar issue in popup</li>
-                            <li>Fixed dark background appearing in light mode</li>
-                            <li>Fixed header text not displaying translations correctly</li>
-                            <li>Removed redundant CSS styles and animations</li>
+                            <li>Resolved various rendering issues and minor bugs</li>
                         </ul>
                     </div>
                 </div>
@@ -224,15 +278,27 @@
                     <div class="changes-section">
                         <h3 class="changes-title">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="12 6 12 12 16 14"></polyline>
+                            </svg>
+                            New Features
+                        </h3>
+                        <ul class="changes-list">
+                            <li>Multi-language support for 11 languages with auto-detection or manual selection</li>
+                        </ul>
+                    </div>
+
+                    <div class="changes-section">
+                        <h3 class="changes-title">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M13 2L3 14h8l-1 8 10-12h-8l1-8z"></path>
                             </svg>
                             Improvements
                         </h3>
                         <ul class="changes-list">
-                            <li>Enhanced Mermaid diagram rendering performance</li>
-                            <li>Improved table of contents navigation</li>
-                            <li>Better code syntax highlighting for TypeScript and JSX</li>
-                            <li>Optimized auto-refresh mechanism</li>
+                            <li>Optimized auto-refresh mechanism for better performance</li>
+                            <li>Enhanced table of contents navigation experience</li>
+                            <li>Improved print layout optimization (Ctrl + P)</li>
                         </ul>
                     </div>
 
@@ -248,9 +314,8 @@
                             Bug Fixes
                         </h3>
                         <ul class="changes-list">
-                            <li>Fixed image lazy loading in nested folders</li>
-                            <li>Fixed math equation rendering in tables</li>
-                            <li>Resolved theme toggle persistence issue</li>
+                            <li>Fixed rendering issues for certain Mermaid diagram types</li>
+                            <li>Resolved various markdown content rendering bugs</li>
                         </ul>
                     </div>
                 </div>
@@ -289,22 +354,25 @@
                             Initial Features
                         </h3>
                         <ul class="changes-list">
-                            <li>Syntax highlighting for 180+ programming languages</li>
-                            <li>Mermaid diagram support (flowcharts, sequence diagrams, etc.)</li>
-                            <li>KaTeX math equation rendering</li>
-                            <li>Dark and light themes with auto mode</li>
-                            <li>Table of contents generation with smooth scrolling</li>
-                            <li>File browser sidebar for navigation</li>
-                            <li>Image viewer with zoom and navigation</li>
-                            <li>Auto-refresh for local and external files</li>
-                            <li>Multi-language support (7 languages)</li>
-                            <li>9 customizable font options</li>
-                            <li>Centered layout with adjustable max width</li>
-                            <li>Configurable font size and line height</li>
-                            <li>GitHub-flavored markdown support</li>
-                            <li>Task list support with checkboxes</li>
-                            <li>Code copy functionality</li>
-                            <li>Scroll to top button</li>
+                            <li><strong>Syntax Highlighting:</strong> Support for 180+ programming languages</li>
+                            <li><strong>Mermaid Diagrams:</strong> Sequence diagrams, flowcharts, graphs, mindmaps,
+                                timelines, and more</li>
+                            <li><strong>Math Equations:</strong> LaTeX math rendering with KaTeX for perfect formulas
+                                and equations</li>
+                            <li><strong>Smart TOC:</strong> Auto-generated navigation with scroll spy, smooth scrolling,
+                                and collapsible sidebar</li>
+                            <li><strong>File Browser:</strong> Navigate local markdown files with search, filter, and
+                                collapsible folder structure</li>
+                            <li><strong>Image Viewer:</strong> Full-screen lightbox with gallery navigation and lazy
+                                loading</li>
+                            <li><strong>Auto-Refresh:</strong> Automatic updates for both local and external files</li>
+                            <li><strong>Theme System:</strong> Dark and light themes with automatic detection</li>
+                            <li><strong>Floating Action Buttons:</strong> Quick access to raw markdown view, centered
+                                layout toggle, theme switch, and scroll to top</li>
+                            <li><strong>GitHub-Flavored Markdown:</strong> Full support including task lists, tables,
+                                and code blocks with copy functionality</li>
+                            <li><strong>Highly Customizable:</strong> 9 font families, adjustable max width, line
+                                height, font size, with reset to defaults</li>
                         </ul>
                     </div>
                 </div>
