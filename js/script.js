@@ -312,7 +312,10 @@
 
       if (!this.toggle || !this.menu || !this.backdrop) return;
 
-      this.toggle.addEventListener('click', () => this.toggleMenu());
+      this.toggle.addEventListener('click', (e) => {
+        e.stopPropagation(); // Prevent event from bubbling to document
+        this.toggleMenu();
+      });
 
       // Close menu when clicking backdrop
       this.backdrop.addEventListener('click', () => this.closeMenu());
@@ -324,7 +327,8 @@
 
       // Close menu when clicking outside
       document.addEventListener('click', e => {
-        if (!e.target.closest('.navbar')) {
+        // Check if click is outside navbar and menu is open
+        if (!e.target.closest('.navbar') && !e.target.closest('.mobile-menu')) {
           this.closeMenu();
         }
       });
@@ -351,7 +355,6 @@
     SmoothScroll.init();
     NavbarScroll.init();
     ShowcaseTabs.init();
-    InstallHandler.init();
     AnimationObserver.init();
     LazyLoad.init();
     ScrollToTop.init();
