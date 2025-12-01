@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Primary Meta Tags -->
-    <title>MarkView - Modern Markdown Viewer for Chrome | Syntax Highlighting, Diagrams & Math</title>
-    <meta name="title" content="MarkView - Modern Markdown Viewer for Chrome | Syntax Highlighting, Diagrams & Math">
+    <title>MarkView - Markdown Viewer for Chrome | Free Extension</title>
+    <meta name="title" content="MarkView - Markdown Viewer for Chrome | Free Extension">
     <meta name="description"
-        content="Transform your markdown files with MarkView - a beautiful Chrome extension featuring syntax highlighting for 180+ languages, Mermaid diagrams, KaTeX math, auto-refresh for local & external files, 7-language support, dark/light themes, and powerful navigation. Free and privacy-first.">
+        content="Beautiful Chrome markdown viewer with syntax highlighting for 180+ languages, Mermaid diagrams, math equations, and dark mode. Free and privacy-first.">
     <meta name="keywords"
         content="markdown viewer, chrome extension, markdown reader, syntax highlighting, mermaid diagrams, katex math, github markdown, markdown to html, markdown preview, dark mode markdown, markdown editor chrome, md viewer, markdown formatter, technical documentation viewer, code highlighting">
     <meta name="author" content="MarkView">
@@ -25,7 +25,7 @@
     <meta property="og:url" content="https://getmarkview.github.io/">
     <meta property="og:title" content="MarkView - Modern Markdown Viewer for Chrome">
     <meta property="og:description"
-        content="Transform your markdown files with beautiful syntax highlighting, Mermaid diagrams, KaTeX math equations, auto-refresh, 7-language support, and powerful navigation. Free Chrome extension.">
+        content="Transform your markdown files with beautiful syntax highlighting, Mermaid diagrams, KaTeX math equations, auto-refresh, 11-language support, and powerful navigation. Free Chrome extension.">
     <meta property="og:image" content="https://getmarkview.github.io/assets/og-image.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
@@ -52,6 +52,10 @@
     <meta name="theme-color" content="#667eea" media="(prefers-color-scheme: light)">
     <meta name="theme-color" content="#0d1117" media="(prefers-color-scheme: dark)">
 
+    <!-- iOS Meta Tags -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
     <!-- Preconnect for Performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -67,9 +71,13 @@
       "@context": "https://schema.org",
       "@type": "SoftwareApplication",
       "name": "MarkView",
+      "url": "https://getmarkview.github.io/",
       "applicationCategory": "BrowserApplication",
       "operatingSystem": "Chrome",
       "description": "Modern markdown viewer for Chrome with syntax highlighting, Mermaid diagrams, KaTeX math equations, and powerful navigation features.",
+      "image": "https://getmarkview.github.io/assets/logo.png",
+      "downloadUrl": "https://chrome.google.com/webstore/detail/cfopbpknalachedpcddhgbgjoigklien",
+      "releaseNotes": "https://getmarkview.github.io/whats-new.html",
       "offers": {
         "@type": "Offer",
         "price": "0",
@@ -174,8 +182,8 @@
                     <span>Modern & Powerful</span>
                 </div>
                 <h1 class="hero-title">
-                    Beautiful Markdown<br>
-                    <span class="gradient-text">Viewing Experience</span>
+                    MarkView - Modern Markdown Viewer<br>
+                    <span class="gradient-text">for Chrome</span>
                 </h1>
                 <p class="hero-description">
                     Transform your markdown files into beautifully formatted documents with live preview,
@@ -223,7 +231,9 @@
                         <div class="browser-actions"></div>
                     </div>
                     <div class="browser-content">
-                        <img src="assets/hero-screenshot.png" alt="MarkView in action" loading="lazy">
+                        <img src="assets/hero-screenshot.png"
+                            alt="MarkView Chrome extension rendering markdown with syntax highlighting and table of contents"
+                            loading="lazy">
                     </div>
                 </div>
             </div>
@@ -395,25 +405,29 @@
             <div class="showcase-content">
                 <div class="tab-pane active" data-pane="dark-theme">
                     <div class="showcase-image">
-                        <img src="assets/screenshot-dark.png" alt="Dark theme showcase" loading="lazy">
+                        <img src="assets/screenshot-dark.png"
+                            alt="Markdown viewer dark theme with GitHub syntax highlighting" loading="lazy">
                     </div>
                     <p class="showcase-caption">Eye-friendly dark mode with GitHub Dark color scheme</p>
                 </div>
                 <div class="tab-pane" data-pane="light-theme">
                     <div class="showcase-image">
-                        <img src="assets/screenshot-light.png" alt="Light theme showcase" loading="lazy">
+                        <img src="assets/screenshot-light.png" alt="Markdown viewer light theme with clean typography"
+                            loading="lazy">
                     </div>
                     <p class="showcase-caption">Clean light theme with high contrast for daylight reading</p>
                 </div>
                 <div class="tab-pane" data-pane="diagrams">
                     <div class="showcase-image">
-                        <img src="assets/screenshot-diagrams.png" alt="Mermaid diagrams showcase" loading="lazy">
+                        <img src="assets/screenshot-diagrams.png" alt="Mermaid flowchart diagrams rendered in MarkView"
+                            loading="lazy">
                     </div>
                     <p class="showcase-caption">Professional flowcharts and diagrams from simple text</p>
                 </div>
                 <div class="tab-pane" data-pane="math">
                     <div class="showcase-image">
-                        <img src="assets/screenshot-math.png" alt="Math equations showcase" loading="lazy">
+                        <img src="assets/screenshot-math.png" alt="LaTeX math equations rendered with KaTeX in MarkView"
+                            loading="lazy">
                     </div>
                     <p class="showcase-caption">Beautiful LaTeX math equations with KaTeX rendering</p>
                 </div>
@@ -483,7 +497,7 @@
             </div>
 
             <div class="docs-grid">
-                <a href="#" class="doc-card">
+                <a href="support.html" class="doc-card">
                     <div class="doc-icon">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                             stroke-width="2">
@@ -495,7 +509,7 @@
                     <p>Installation guide and basic usage</p>
                 </a>
 
-                <a href="#" class="doc-card">
+                <a href="support.html" class="doc-card">"doc-card">
                     <div class="doc-icon">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                             stroke-width="2">
@@ -507,7 +521,7 @@
                     <p>Boost your productivity</p>
                 </a>
 
-                <a href="#" class="doc-card">
+                <a href="support.html" class="doc-card">
                     <div class="doc-icon">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                             stroke-width="2">
@@ -573,7 +587,6 @@
                             <li><a href="#features">Features</a></li>
                             <li><a href="#showcase">Showcase</a></li>
                             <li><a href="whats-new.html">What's New</a></li>
-                            <li><a href="#">Roadmap</a></li>
                         </ul>
                     </div>
 
@@ -582,8 +595,9 @@
                         <ul>
                             <li><a href="#docs">Documentation</a></li>
                             <li><a href="support.html">Support</a></li>
-                            <li><a href="https://github.com/getmarkview/support" target="_blank" rel="noopener">GitHub Issues</a></li>
-                            <li><a href="#">Release Notes</a></li>
+                            <li><a href="https://github.com/getmarkview/support" target="_blank" rel="noopener">GitHub
+                                    Issues</a></li>
+                            <li><a href="whats-new.html">Release Notes</a></li>
                         </ul>
                     </div>
 
@@ -592,7 +606,6 @@
                         <ul>
                             <li><a href="privacy-policy.html">Privacy Policy</a></li>
                             <li><a href="terms.html">Terms of Service</a></li>
-                            <li><a href="#">License</a></li>
                         </ul>
                     </div>
                 </div>

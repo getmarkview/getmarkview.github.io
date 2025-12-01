@@ -5,7 +5,7 @@
   <!-- Homepage -->
   <url>
     <loc>https://getmarkview.github.io/</loc>
-    <lastmod>2025-11-19</lastmod>
+    <lastmod>2025-12-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -17,7 +17,7 @@
   <!-- Privacy Policy -->
   <url>
     <loc>https://getmarkview.github.io/privacy-policy.html</loc>
-    <lastmod>2025-11-19</lastmod>
+    <lastmod>2025-12-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -25,7 +25,7 @@
   <!-- Terms of Service -->
   <url>
     <loc>https://getmarkview.github.io/terms.html</loc>
-    <lastmod>2025-11-19</lastmod>
+    <lastmod>2025-12-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -33,7 +33,15 @@
   <!-- Support -->
   <url>
     <loc>https://getmarkview.github.io/support.html</loc>
-    <lastmod>2025-11-19</lastmod>
+    <lastmod>2025-12-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- What's New / Changelog -->
+  <url>
+    <loc>https://getmarkview.github.io/whats-new.html</loc>
+    <lastmod>2025-12-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
