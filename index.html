@@ -62,7 +62,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/video-demo.css" />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
 
@@ -106,6 +107,16 @@
       "author": {
         "@type": "Organization",
         "name": "MarkView"
+      },
+      "video": {
+        "@type": "VideoObject",
+        "name": "MarkView Chrome Extension - Best Markdown Viewer | Installation & Features Guide",
+        "description": "Complete guide to MarkView Chrome Extension featuring installation steps, markdown rendering, Mermaid diagrams, math equations, and more.",
+        "thumbnailUrl": "https://i.ytimg.com/vi/DVsQg_OBTHs/maxresdefault.jpg",
+        "uploadDate": "2025-12-02",
+        "duration": "PT4M36S",
+        "contentUrl": "https://www.youtube.com/watch?v=DVsQg_OBTHs",
+        "embedUrl": "https://www.youtube.com/embed/DVsQg_OBTHs"
       }
     }
     </script>
@@ -121,6 +132,7 @@
                     <span class="logo-text">MarkView</span>
                 </a>
                 <div class="nav-links desktop-only">
+                    <a href="#demo">Demo</a>
                     <a href="#features">Features</a>
                     <a href="#showcase">Showcase</a>
                     <a href="#docs">Docs</a>
@@ -158,6 +170,7 @@
             </div>
             <!-- Mobile Menu -->
             <div class="mobile-menu">
+                <a href="#demo">Demo</a>
                 <a href="#features">Features</a>
                 <a href="#showcase">Showcase</a>
                 <a href="#docs">Docs</a>
@@ -202,7 +215,7 @@
                         </svg>
                         Install for Chrome
                     </a>
-                    <a href="#showcase" class="btn btn-secondary btn-lg">
+                    <a href="#demo" class="btn btn-secondary btn-lg">
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                             stroke-width="2">
                             <polygon points="5 3 19 12 5 21 5 3" />
@@ -236,6 +249,51 @@
                             alt="MarkView Chrome extension rendering markdown with syntax highlighting and table of contents"
                             loading="lazy">
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Demo Section -->
+    <section id="demo" class="video-demo">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Demo</span>
+                <h2 class="section-title">See MarkView in Action</h2>
+                <p class="section-subtitle">
+                    Watch our complete guide to get started with MarkView in just 4 minutes
+                </p>
+            </div>
+
+            <div class="video-wrapper">
+                <div class="video-container">
+                    <iframe width="560" height="315"
+                        src="https://www.youtube-nocookie.com/embed/DVsQg_OBTHs?si=0TYIEgWdXn4C2aNk"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+
+                <div class="video-timestamps">
+                    <button class="timestamps-toggle">
+                        <h3>Video Chapters</h3>
+                        <span class="toggle-icon">▼</span>
+                    </button>
+                    <ul class="timestamps-list">
+                        <li><a href="#" class="timestamp-link" data-time="0">00:00 - Introduction to MarkView</a></li>
+                        <li><a href="#" class="timestamp-link" data-time="8">00:08 - How to Install MarkView
+                                Extension</a></li>
+                        <li><a href="#" class="timestamp-link" data-time="34">00:34 - Enable File Access for Local
+                                Files</a></li>
+                        <li><a href="#" class="timestamp-link" data-time="64">01:04 - Basic Markdown Rendering Demo</a>
+                        </li>
+                        <li><a href="#" class="timestamp-link" data-time="141">02:21 - Mermaid Diagrams</a></li>
+                        <li><a href="#" class="timestamp-link" data-time="170">02:50 - Math Equations</a></li>
+                        <li><a href="#" class="timestamp-link" data-time="190">03:10 - Lazy Image Loading</a></li>
+                        <li><a href="#" class="timestamp-link" data-time="219">03:39 - Open file in external links
+                                (GitHub, GitLab, etc)</a></li>
+                        <li><a href="#" class="timestamp-link" data-time="258">04:18 - Website and Support page</a></li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -619,6 +677,7 @@
     </footer>
 
     <script src="js/script.js"></script>
+    <script src="js/video-demo.js"></script>
 </body>
 
 </html>

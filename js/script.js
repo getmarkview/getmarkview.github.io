@@ -312,7 +312,7 @@
 
       if (!this.toggle || !this.menu || !this.backdrop) return;
 
-      this.toggle.addEventListener('click', (e) => {
+      this.toggle.addEventListener('click', e => {
         e.stopPropagation(); // Prevent event from bubbling to document
         this.toggleMenu();
       });
@@ -348,6 +348,8 @@
       document.body.style.overflow = '';
     },
   };
+
+  // Video Timestamps - loaded from separate video-demo.js file
 
   // Initialize everything when DOM is ready
   function init() {
