@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Success - MarkView PRO</title>
+
+    <!-- Meta Tags -->
+    <meta name="description"
+        content="Thank you for purchasing MarkView PRO! Your license will be delivered via email shortly.">
+    <meta name="robots" content="noindex, nofollow">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/success.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Loading State -->
+        <div class="loading-container" id="loading">
+            <div class="spinner"></div>
+            <p class="loading-text">Processing your purchase...</p>
+        </div>
+
+        <!-- Success Content -->
+        <div id="content" style="display: none;">
+            <!-- Success Icon -->
+            <div class="success-icon">✅</div>
+
+            <!-- Title & Subtitle -->
+            <h1>Payment Successful!</h1>
+            <p class="subtitle">
+                Thank you for purchasing MarkView PRO. Your license key will be delivered to your email shortly.
+            </p>
+
+            <!-- Info Banner -->
+            <div class="info-banner">
+                <div class="info-banner-icon">📧</div>
+                <div class="info-banner-text">
+                    <strong>Check your email</strong> for your license key and activation instructions. It may take a
+                    few minutes to arrive.
+                </div>
+            </div>
+
+            <!-- Status Card -->
+            <div class="status-card">
+                <div class="status-item">
+                    <span class="status-label">Order Status</span>
+                    <span class="status-badge">
+                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10 3L4.5 8.5L2 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                        Confirmed
+                    </span>
+                </div>
+                <div class="status-item">
+                    <span class="status-label">License Tier</span>
+                    <span class="status-value">MarkView PRO</span>
+                </div>
+                <div class="status-item">
+                    <span class="status-label">Purchase Date</span>
+                    <span class="status-value" id="purchase-date">Just now</span>
+                </div>
+            </div>
+
+            <!-- Instructions -->
+            <div class="instructions-section">
+                <div class="instructions-header">
+                    <div class="instructions-icon">📋</div>
+                    <h3 class="instructions-title">Next Steps</h3>
+                </div>
+                <ul class="instructions-list">
+                    <li>Check your email inbox for your license key</li>
+                    <li>Open the MarkView extension popup in Chrome</li>
+                    <li>Navigate to the "License" tab</li>
+                    <li>Paste your license key and click "Activate"</li>
+                </ul>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="action-buttons">
+                <a href="https://getmarkview.github.io/" class="btn btn-primary">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                        <polyline points="9 22 9 12 15 12 15 22" />
+                    </svg>
+                    Back to MarkView
+                </a>
+                <a href="https://getmarkview.github.io/support.html" class="btn btn-secondary">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10" />
+                        <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" />
+                        <line x1="12" y1="17" x2="12.01" y2="17" />
+                    </svg>
+                    Get Help
+                </a>
+            </div>
+
+            <!-- Footer -->
+            <div class="footer-text">
+                Having trouble? Visit our <a href="https://getmarkview.github.io/support.html" target="_blank"
+                    rel="noopener noreferrer">support page</a> or email <a
+                    href="mailto:markview.app@gmail.com">markview.app@gmail.com</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="js/success.js"></script>
+</body>
+
+</html>
